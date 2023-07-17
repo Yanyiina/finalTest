@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_high"
+    android:background="@color/main_background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!--标题栏-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="top"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:text="填写身高、体重"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:background="#00000000"
+                android:textColor="#e6ffffff"/>
+        </RelativeLayout>
+
+
+
+        <!--准备框-->
+        <RelativeLayout
+            android:id="@+id/main5_front"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible">
+            <!--选择身高体重-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <!--身高-->
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:background="@drawable/color_btn">
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/weight"/>
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+                <!--跳过按钮-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+                    <Button
+                        android:id="@+id/main5_sub1_1_start"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/main5_btn_tiaoguo"
+                        android:text="跳过"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+        <!--结束测试-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/main5_sub1_1_exist"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:paddingTop="4dp"
+                android:gravity="center"
+                android:background="@drawable/btn_main5_sub_over"
+                android:text="结束测试"
+                android:textColor="#fff"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景 -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/main3_background" /> <!-- 背景颜色为白色 -->
+            <corners android:radius="20dp" /> <!-- 圆角半径为20dp -->
+            <stroke
+                    android:color="#FFFFFF"
+                    android:width="2dp" /> <!-- 边框为白色，宽度为2dp -->
+        </shape>
+    </item>
+
+    <!-- 进度 -->
+    <item android:id="@android:id/progress">
+        <inset android:insetLeft="2dp"
+               android:insetRight="2dp"
+               android:insetTop="2dp"
+               android:insetBottom="2dp">
+            <clip>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/btn_normal" /> <!-- 进度颜色为黑色 -->
+                    <corners android:radius="20dp" /> <!-- 圆角半径为20dp -->
+                </shape>
+            </clip>
+        </inset>
+    </item>
+</layer-list>
+
+

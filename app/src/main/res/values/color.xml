@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="background">#101010</color>
+
+    <color name="back_go">#e24561</color>
+    <color name="button_select">#b34168</color>
+
+    <!--min3-->
+    <color name="main3_background">#1d1113</color>
+
+
+    <color name="main_background">#FF101010</color>
+
+
+    <color name="btn_normal">#b05483</color>
+    <color name="btn_pressed">#BB3878</color>
+    
+    
+    <!--正式-->
+    <color name="back">#FFDE3151</color>
+
+
+
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main6_sub2_2"
+    android:orientation="vertical"
+    android:background="@color/main_background">
+
+    <!--界面3，计时控制-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+
+
+        <!--显示页面-->
+        <RelativeLayout
+            android:id="@+id/main6_behind"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!--圆环倒计时-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5">
+                    <!--圆形进度条-->
+                    <RelativeLayout
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
+                        android:background="@drawable/main5_sub1_1"
+                        android:layout_centerInParent="true">
+                        <ProgressBar
+                            android:id="@+id/main6_sub2_progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="215dp"
+                            android:layout_height="215dp"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/circular_progress_bar" />
+                        <!--文字部分-->
+                        <RelativeLayout
+                            android:layout_width="215dp"
+                            android:layout_height="215dp"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true"
+                            >
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerInParent="true">
+                                <TextView
+                                    android:id="@+id/main6_sub2_countdownText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="00:00"
+                                    android:textColor="#fff"
+                                    android:textSize="10sp" />
+                                <TextView
+                                    android:id="@+id/main6_sub2_elapsedTimeText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    android:textColor="#fff"
+                                    android:textSize="40sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="秒"
+                                    android:textColor="#fff"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <!--真人指导视频-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal">
+
+                    <VideoView
+                        android:id="@+id/main6_sub2_2_videoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--结束测试-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/main6_sub2_2_exist"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:paddingTop="4dp"
+                android:gravity="center"
+                android:background="@drawable/btn_main5_sub_over"
+                android:text="结束测试"
+                android:textColor="#fff"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

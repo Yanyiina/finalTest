@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2_stu_list"
+    android:orientation="vertical"
+    android:background="@color/main_background"
+
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+        <!--标题栏-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="top"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="学员列表"
+                android:textColor="#fff"
+                android:textSize="26dp" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <!--设置-->
+                <Button
+                    android:id="@+id/main2_btn_setup"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/set_up"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <!--搜索栏-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            >
+            <EditText
+                android:id="@+id/main2_search_edit"
+                android:layout_width="0dp"
+                android:layout_height="80px"
+                android:layout_weight="8"
+                android:drawableLeft="@drawable/main2_search_left"
+                android:background="@drawable/main2_stu_search"
+                android:hint="搜索"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:textColorHint="#b7b7b7"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+            <!--加号-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/main2_btn_add"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_gradient_add"
+                    android:text="@string/main2_add"
+                    android:textColor="#fff"
+                    android:textSize="26dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <!--信息栏  先用json文件读取信息放入列表-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            >
+
+            <ListView
+                android:id="@+id/main2_stu_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/main_background"
+                android:dividerHeight="10dp"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+        <!--加载框-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true">
+                <Button
+                    android:id="@+id/main2_btn_go_lastPage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/color_main_press"
+                    android:layout_marginRight="15dp"
+                    android:paddingRight="10dp"
+                    android:drawableRight="@drawable/main3_back_wid"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/main2_load_page"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/color_main_press2"
+                        android:text="4/100"
+                        android:textColor="#fff"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/main2_btn_go_nextPage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/color_main_press"
+                    android:paddingRight="10dp"
+                    android:drawableRight="@drawable/main3_back_wid"
+                    />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <!--底边框-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:paddingTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                >
+                <!--退出按钮-->
+                <Button
+                    android:id="@+id/main2_btn_go_out"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_back"
+                    android:drawableTop="@drawable/main2_go_wid"
+                    android:padding="5dp"
+                    android:text="退出"
+                    android:textColor="#fff"
+                    android:textSize="5dp" />
+                <!--非学员按钮-->
+                <Button
+                    android:id="@+id/main2_btn_not_stu"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="9"
+                    android:layout_toRightOf="@id/main2_btn_go_out"
+                    android:background="@drawable/btn_gradient"
+                    android:text="非学员列表"
+
+                    android:textColor="#fff"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main5_sub5_4"
+    android:orientation="vertical"
+    android:background="@color/main_background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!--显示页面-->
+        <RelativeLayout
+            android:id="@+id/main5_behind"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!--标题栏-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="选择反应时评估"
+                        android:gravity="center"
+                        android:textSize="30dp"
+                        android:background="#00000000"
+                        android:textColor="#fff"/>
+                </RelativeLayout>
+
+                <!--中间栏-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:layout_margin="30dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/main5_sub5_4_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="#fff"
+                        android:textSize="80sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:layout_marginTop="-8dp"
+                        android:textColor="#fff"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:id="@+id/main5_sub5_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-70dp"
+                        android:layout_marginBottom="50dp"
+                        android:background="@drawable/main5_sub1_3" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/main5_sub1_3_peo" />
+
+                </LinearLayout>
+
+
+                <!--返回-前进栏-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:gravity="bottom"
+                    android:paddingTop="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="bottom">
+                        <!--返回按钮-->
+                        <Button
+                            android:id="@+id/main5_sub5_4_back"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_back"
+                            android:drawableTop="@drawable/main4_back_wid"
+                            android:padding="5dp"
+                            android:text="返回"
+                            android:textColor="#fff"
+                            android:textSize="5dp" />
+                        <!--下一个项目-->
+                        <LinearLayout
+                            android:id="@+id/main5_sub5_4_start"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="6"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/btn_gradient"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="下一个项目"
+                                android:textSize="15dp"
+                                android:textColor="#fff"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="10dp"
+                                android:textColor="#fff"/>
+                        </LinearLayout>
+
+                        <!--查看报告-->
+                        <Button
+                            android:id="@+id/main5_sub5_4_check"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="3"
+                            android:paddingLeft="15dp"
+                            android:background="@drawable/btn_back"
+                            android:textSize="10dp"
+                            android:text="查看报告"
+                            android:drawableLeft="@drawable/main5_sub1_3_check_wid"
+                            android:textColor="#fff"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+        <!--结束测试-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/main5_sub5_4_exist"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:paddingTop="4dp"
+                android:gravity="center"
+                android:background="@drawable/btn_main5_sub_over"
+                android:text="结束测试"
+                android:textColor="#fff"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

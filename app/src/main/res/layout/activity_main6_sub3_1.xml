@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main6_sub3_1"
+    android:orientation="vertical"
+    android:background="@color/main_background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <!--准备框-->
+        <RelativeLayout
+            android:id="@+id/main6_sub3_front"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                >
+                <!--提示框-->
+                <LinearLayout
+                    android:layout_width="288dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp"
+                    android:paddingLeft="30dp"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/main5_sub1_1_sel_wid"
+                    android:text="开始前准备"
+                    android:textColor="#fff">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="开始前准备"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:layout_marginBottom="18dp"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="30dp"
+                        android:text="垂直纵跳可以评估你的平衡性,请做好准备，3秒倒计时结束后开始评估。"
+                        android:textColor="#fff"
+                        android:textSize="12dp"/>
+                    <!--小人图标-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:drawableRight="@drawable/main5_sub1_wid"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--跳过按钮-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp">
+                    <Button
+                        android:id="@+id/main6_sub3_1_start"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/main5_btn_tiaoguo"
+                        android:text="跳过"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <!--显示页面-->
+        <RelativeLayout
+            android:id="@+id/main6_sub3_behind"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <!--标题栏-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="垂直纵跳"
+                        android:gravity="center"
+                        android:textSize="30dp"
+                        android:background="#00000000"
+                        android:textColor="#fff"/>
+                </RelativeLayout>
+
+                <!--倒计栏-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/main6_sub3_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#fff"
+                        android:textSize="80dp"/>
+
+                </RelativeLayout>
+
+                <!--真人指导视频-->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:gravity="center_horizontal">
+
+                    <VideoView
+                        android:id="@+id/main6_sub3_1_videoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--结束测试-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/main6_sub3_1_exist"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:paddingTop="4dp"
+                android:gravity="center"
+                android:background="@drawable/btn_main5_sub_over"
+                android:text="结束测试"
+                android:textColor="#fff"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

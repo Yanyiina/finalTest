@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--设置中按钮的颜色-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item >
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:startColor="#3dd47dc5"
+                android:endColor="#3dde3151"
+                android:angle="0" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <!-- 渐变色内边框 -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- 边框图片渐变 -->
+            <stroke
+                android:width="2px"
+                android:angle="0"
+                android:color="#1CFFFFFF">
+            </stroke>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+
+</layer-list>

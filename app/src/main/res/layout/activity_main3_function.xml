@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3_function"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    >
+
+        <!--整体-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_background"
+            android:alpha="0.2" />
+
+        <!--设置-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp">
+            <!--设置-->
+            <Button
+                android:id="@+id/main2_btn_setup"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/set_up"/>
+        </RelativeLayout>
+
+
+        <!--中间-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_margin="15dp">
+
+
+
+
+            <!--学生信息及返回-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <!--学生信息-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/color_name">
+
+                    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:id="@+id/main3_picture"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:src="@drawable/icon"-->
+                    <!--app:civ_border_color="#e5e5e5"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!--app:civ_fill_color="#ffffff" />-->
+                    <!--头像-->
+                    <ImageView
+                        android:id="@+id/main3_picture"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="6dp"
+                        android:src="@drawable/main3_girl_wid"/>
+                    <!--姓名按钮-->
+                    <TextView
+                        android:id="@+id/main3_name"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:text="闫一一"
+                        android:padding="10dp"
+                        android:textColor="#fff"
+                        android:drawableRight="@drawable/main3_back_wid"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/main3_btn_back"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/color_main3_back"
+                    android:drawableRight="@drawable/main3_back_wid"
+                    android:padding="10dp"
+                    android:text="返回"
+                    android:textColor="#CCFFFFFF" />
+
+            </LinearLayout>
+
+
+            <!--选择-->
+            <!--体态选择-->
+            <LinearLayout
+                android:id="@+id/btn_pose"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:background="@drawable/color_btn">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/main3_left_top"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/main3_right_top"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--中间-->
+                <LinearLayout
+                    android:id="@+id/btn_pose1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    >
+                    <!--按钮中间-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/main3_btn_pose"
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="    体态评估"
+                            android:textColor="#fff"
+                            android:textSize="16dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/main3_pose_wid"
+                            android:drawableRight="@drawable/main3_arr_wid"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左下"
+                        android:src="@drawable/main3_left_bottom"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/main3_right_bottom"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <!--体适能评估-->
+            <LinearLayout
+                android:id="@+id/btn_fit"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/color_btn">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/main3_left_top"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/main3_right_top"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--体适能按钮中间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    >
+                    <!--按钮中间-->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/button2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:text="    体适能评估"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:gravity="center_vertical"
+                            android:textColor="#fff"
+                            android:textSize="16dp"
+                            android:drawableLeft="@drawable/main3_fit_wid"
+                            android:drawableRight="@drawable/main3_arr_wid"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左下"
+                        android:src="@drawable/main3_left_bottom"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/main3_right_bottom"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

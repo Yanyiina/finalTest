@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--按钮渐变色-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<gradient
+    android:startColor="#DE3151"
+    android:endColor="#EB7389"
+    />
+<corners android:radius="4dp" />
+</shape>

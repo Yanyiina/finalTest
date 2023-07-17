@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/main_background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 第一块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- 在这里添加第一块的组件 -->
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="top">
+
+                <TextView android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="正面评估"
+                    android:textColor="#e6ffffff"
+                    android:textSize="30dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- 第二块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            >
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/process"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ProgressBar
+                    android:id="@+id/customProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="60"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/main4_sub2_progress_bar"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/process"
+                android:layout_marginStart="8dp"
+                tools:ignore="NotSibling"
+                android:layout_toRightOf="@id/customProgressBar"
+                android:layout_marginLeft="8dp">
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- 第三块 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/main4_sub3_scan_wid"/>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="center">
+
+            <TextView android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="请保持双手自然垂放，并看向镜面，保持静止"
+                android:textColor="#FFF"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--结束测试-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        >
+        <TextView
+            android:id="@+id/main4_sub1_exist"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:paddingTop="4dp"
+            android:gravity="center"
+            android:background="@drawable/btn_main5_sub_over"
+            android:text="结束测试"
+            android:textColor="#fff"
+            android:textSize="8dp"
+            android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

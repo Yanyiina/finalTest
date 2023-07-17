@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main4_sub4"
+        android:background="@color/main3_background">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:background="@color/main3_background">
+
+        <!-- 第一块 -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <!-- 在这里添加第一块的组件 -->
+            <RelativeLayout android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:gravity="top">
+
+                <TextView android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:text="侧面评估"
+                          android:textColor="#FFF"
+                          android:textSize="40dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- 第二块 -->
+        <LinearLayout
+                android:id="@+id/countdown"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:visibility="visible">
+
+            <!-- 在这里添加第二块的组件 -->
+            <TextView
+                    android:id="@+id/countTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="#FFF"
+                    android:textSize="40dp">
+
+
+            </TextView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/process_and_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+            <RelativeLayout
+                    android:id="@+id/process"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                <ProgressBar
+                        android:id="@+id/customProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="60"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/main4_sub2_progress_bar"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/process"
+                    android:layout_marginStart="8dp"
+                    tools:ignore="NotSibling"
+                    android:layout_toRightOf="@id/customProgressBar"
+                    android:layout_marginLeft="8dp">
+
+                <TextView
+                        android:id="@+id/timeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="#FFF"
+                        android:textSize="14sp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- 第三块 -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent">
+
+
+                <Button
+                        android:id="@+id/main4_sub2_exist"
+                        android:layout_width="60dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/btn_main4_shape"
+                        android:drawableTop="@drawable/main4_sub1_exist_wid"
+                        android:text="结束测试"
+                        android:textColor="#FFF"
+                        android:textSize="10sp" android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/main4_sub4_scan_wid"/>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:layout_gravity="center">
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="fill_parent"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:text="请自然看向前方，保持静止"
+                      android:textColor="#FFF"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

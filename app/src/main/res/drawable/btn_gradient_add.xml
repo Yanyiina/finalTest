@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景 -->
+    <item>
+        <shape android:shape="oval">
+            <corners android:radius="0dp" />   <!-- 设置圆角弧度 -->
+            <size
+                android:width="35dp"
+                android:height="35dp" />
+            <stroke
+                android:width="0dp"
+                android:color="#fff" />
+            <gradient
+                android:angle="0"
+                android:startColor="#D47DC5"
+                android:endColor="#DE3151"
+                android:alpha="0.8" />
+        </shape>
+    </item>
+    <!-- 边框 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+</layer-list>

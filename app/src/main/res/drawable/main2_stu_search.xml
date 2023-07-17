@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 角度 -->
+    <corners android:radius="135px"/>
+    <!-- 填充色 -->
+    <solid android:color="#4ADB536C"/>
+    <!-- 描边 设置线宽及颜色 -->
+    <stroke android:color="#99DB536C"
+        android:width="2px"/>
+</shape>
