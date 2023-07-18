@@ -33,7 +33,7 @@ public class Main4_fit_0 extends AppCompatActivity {
         btn_pose_go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main4_fit_0.this,Main4_sub1.class);
+                Intent intent = new Intent(Main4_fit_0.this,Main_high.class);
                 intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
