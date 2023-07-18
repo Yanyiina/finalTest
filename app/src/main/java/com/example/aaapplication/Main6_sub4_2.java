@@ -41,6 +41,9 @@ public class Main6_sub4_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6_sub4_2);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         //        自动播放视频
         //读取放在 raw 目录下的文件
         videoView = (VideoView) findViewById(R.id.main6_sub4_2_videoView);
@@ -68,6 +71,7 @@ public class Main6_sub4_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_sub4_2.this,Main6_age7_18.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }
@@ -93,7 +97,7 @@ public class Main6_sub4_2 extends AppCompatActivity {
             }
         };
 
-        startCountdown();
+        startCountdown(student);
         startElapsedTime();
         startProgressBar();
 
@@ -102,7 +106,7 @@ public class Main6_sub4_2 extends AppCompatActivity {
     }
 
     //倒计时设置
-    private void startCountdown() {
+    private void startCountdown(final List_stu student) {
         countDownTimer = new CountDownTimer(totalTime, interval) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -119,7 +123,7 @@ public class Main6_sub4_2 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 countdownText.setText("00:00");
-                navigateToAnotherActivity();  //倒计时正常结束时跳转另一个界面
+                navigateToAnotherActivity(student);  //倒计时正常结束时跳转另一个界面
 //                progressBar.setProgress(0);
             }
         };
@@ -146,8 +150,9 @@ public class Main6_sub4_2 extends AppCompatActivity {
     }
 
     //倒计时结束时跳转页面
-    private void navigateToAnotherActivity() {
+    private void navigateToAnotherActivity(List_stu student) {
         Intent intent = new Intent(Main6_sub4_2.this, Main6_sub4_3.class);
+        intent.putExtra("student", student);
         startActivity(intent);
         finish(); // 结束当前页面
     }

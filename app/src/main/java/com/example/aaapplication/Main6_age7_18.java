@@ -14,12 +14,16 @@ public class Main6_age7_18 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6_age7_18);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         //        返回按钮
         Button main6_btn_back = (Button) findViewById(R.id.main6_btn_back);
         main6_btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main3_function.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -30,6 +34,7 @@ public class Main6_age7_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main6_sub1.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -40,6 +45,7 @@ public class Main6_age7_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main6_sub2.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -50,6 +56,7 @@ public class Main6_age7_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main6_sub3.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -60,6 +67,7 @@ public class Main6_age7_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main6_sub4.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -70,6 +78,7 @@ public class Main6_age7_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main6_sub5.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -80,6 +89,7 @@ public class Main6_age7_18 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main6_age7_18.this,Main6_sub6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });

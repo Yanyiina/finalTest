@@ -30,6 +30,9 @@ public class Main6_sub1_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6_sub1_1);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         //        按键播放视频
         videoView = (VideoView) findViewById(R.id.main6_sub1_1_videoView);
         btn_start = (Button) findViewById(R.id.main6_sub1_1_start);
@@ -77,6 +80,7 @@ public class Main6_sub1_1 extends AppCompatActivity {
                     countDownTimer = null;
                 }
                 Intent intent = new Intent(Main6_sub1_1.this,Main6_age7_18.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish(); // 销毁当前活动
             }
@@ -99,6 +103,7 @@ public class Main6_sub1_1 extends AppCompatActivity {
                 if (countDownTimer != null) {
                     Intent intent = new Intent(Main6_sub1_1.this, Main6_sub1_2.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    intent.putExtra("student", student);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
 //                timeText.setText("Done");
