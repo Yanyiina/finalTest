@@ -17,6 +17,8 @@ public class Main4_sub1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_sub1);
         final Handler handler = new Handler();
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
 
         LinearLayout layout = findViewById(R.id.whether_show);
         // 这里需要后端传入检测值(boolean类型)，没有人或距离不满足传入FALSE
@@ -32,6 +34,7 @@ public class Main4_sub1 extends AppCompatActivity {
                     // 在这里执行需要延迟的任务
                     // 例如，在10秒后执行某个操作
                     Intent intent = new Intent(Main4_sub1.this, Main4_sub2.class);
+                    intent.putExtra("student", student);
                     startActivity(intent);
                 }
             }, 10000); // 10000 毫秒 = 10秒
@@ -44,6 +47,7 @@ public class Main4_sub1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main4_sub1.this,Main4_fit_0.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 handler.removeCallbacksAndMessages(null); // 取消延迟任务
                 finish();

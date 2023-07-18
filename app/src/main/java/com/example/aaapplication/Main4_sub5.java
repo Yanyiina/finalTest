@@ -24,11 +24,15 @@ public class Main4_sub5 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_sub5);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         Button btn_exist = (Button) findViewById(R.id.main4_sub2_exist);
         btn_exist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main4_sub5.this, Main4_fit_0.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }

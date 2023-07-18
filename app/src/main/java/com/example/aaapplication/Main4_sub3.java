@@ -21,13 +21,17 @@ public class Main4_sub3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_sub3);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         // 用户退出
         // 用户点击后，返回上一层页面
-        Button btn_exist = (Button)findViewById(R.id.main4_sub2_exist);
+        TextView btn_exist = findViewById(R.id.main4_sub3_exist);
         btn_exist.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main4_sub3.this,Main4_fit_0.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }
@@ -40,7 +44,7 @@ public class Main4_sub3 extends AppCompatActivity {
         progressBar.setMax(60);
 
         // 创建并启动倒计时定时器
-        countDownTimer = new CountDownTimer(60000, 1000) {
+        countDownTimer = new CountDownTimer(6000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 // 每秒更新进度条和时间文本
@@ -57,7 +61,9 @@ public class Main4_sub3 extends AppCompatActivity {
 
                 // 跳转下一页面
                 Intent intent = new Intent(Main4_sub3.this, main4_sub4.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
+                finish();
             }
         };
 

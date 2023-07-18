@@ -2,7 +2,9 @@ package com.example.aaapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -23,6 +25,9 @@ public class main4_sub4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4_sub4);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         // 用户退出
         // 用户点击后，返回上一层页面
         Button btn_exist = (Button)findViewById(R.id.main4_sub2_exist);
@@ -30,6 +35,7 @@ public class main4_sub4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(main4_sub4.this,Main4_fit_0.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }
@@ -64,6 +70,16 @@ public class main4_sub4 extends AppCompatActivity {
                 progressBar = findViewById(R.id.customProgressBar);
                 timeText = findViewById(R.id.timeText);
                 my_process.start_process(progressBar, timeText);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(main4_sub4.this, Main4_sub5.class);
+                        intent.putExtra("student", student);
+                        startActivity(intent);
+                        finish();
+                    }
+                }, 60000);
             }
         };
 

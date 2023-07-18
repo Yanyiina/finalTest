@@ -22,11 +22,5 @@ public class Main3_list_item extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
     }
-
-
-
 }
