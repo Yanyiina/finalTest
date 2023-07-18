@@ -57,6 +57,9 @@ public class Main5_sub5_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5_sub5_3);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         //点击切换页面
         btn_start = (Button) findViewById(R.id.main5_sub5_1_start);
         rel_front = (RelativeLayout)findViewById(R.id.main5_sub5_front);
@@ -98,12 +101,12 @@ public class Main5_sub5_3 extends AppCompatActivity {
                 rel_cir.setVisibility(View.VISIBLE);
 
 //                创建新的
-                startCountdown();
+                startCountdown(student);
                 startElapsedTime();
                 startProgressBar();
 
                 // 启动打地鼠游戏
-                startWhackAMoleGame();
+                startWhackAMoleGame(student);
 
             }
         };
@@ -124,6 +127,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
                     mouseTimer = null;
                 }
                 Intent intent = new Intent(Main5_sub5_3.this,Main5_age3_6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }
@@ -159,7 +163,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
     }
 
     //倒计时设置
-    private void startCountdown() {
+    private void startCountdown(final List_stu student) {
         countDown_Timer = new CountDownTimer(totalTime, interval) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -176,7 +180,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 countdownText.setText("00:00");
-                navigateToAnotherActivity();  //倒计时正常结束时跳转另一个界面
+                navigateToAnotherActivity(student);  //倒计时正常结束时跳转另一个界面
 //                progressBar.setProgress(0);
             }
         };
@@ -203,9 +207,10 @@ public class Main5_sub5_3 extends AppCompatActivity {
     }
 
     //倒计时结束时跳转页面
-    private void navigateToAnotherActivity() {
+    private void navigateToAnotherActivity(List_stu student) {
         Intent intent = new Intent(Main5_sub5_3.this, Main5_sub5_4.class);
         intent.putExtra("score", mouseCount);
+        intent.putExtra("student", student);
         startActivity(intent);
         finish(); // 结束当前页面
     }
@@ -233,14 +238,14 @@ public class Main5_sub5_3 extends AppCompatActivity {
 
     // 打地鼠游戏
     // 打地鼠游戏
-    private void startWhackAMoleGame() {
+    private void startWhackAMoleGame(final List_stu student) {
         gameStarted = true;
         mouseCount = 0;
         mouseTimer = new CountDownTimer(totalTime, interval) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (gameStarted && mouseCount < maxMouseCount) {
-                    showMouseInRandomHole();
+                    showMouseInRandomHole(student);
                 } else {
                     cancel();
                 }
@@ -264,7 +269,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
         }
     }
 
-    private void showMouseInRandomHole() {
+    private void showMouseInRandomHole(final List_stu student) {
         // 根据您提供的打地鼠布局文件中的 hole 和 mouse 控件的 ID 命名规则进行随机显示地鼠的逻辑
         int holeCount = 9; // 假设有 9 个洞
         int randomHoleIndex = (int) (Math.random() * holeCount) + 1; // 随机选择一个洞
@@ -281,7 +286,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
                     score.setText("得分为" + mouseCount);
                     if (mouseCount == maxMouseCount) {
                         stopWhackAMoleGame();
-                        navigateToAnotherActivity();
+                        navigateToAnotherActivity(student);
                     }
                 }
             }

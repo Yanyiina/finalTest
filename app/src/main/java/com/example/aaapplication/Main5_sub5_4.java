@@ -21,6 +21,9 @@ public class Main5_sub5_4 extends AppCompatActivity {
         Intent intent = getIntent();
         // 从Intent中提取得分数据
         int score = intent.getIntExtra("score", 0);
+
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         // 找到TextView
         TextView scoreTextView = findViewById(R.id.main5_sub5_4_score);
         // 将得分设置为TextView的文本
@@ -33,6 +36,7 @@ public class Main5_sub5_4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main5_sub5_4.this, Main5_age3_6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }
@@ -45,6 +49,7 @@ public class Main5_sub5_4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main5_sub5_4.this, Main5_age3_6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }
@@ -56,6 +61,7 @@ public class Main5_sub5_4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main5_sub5_4.this, Main5_age3_6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });

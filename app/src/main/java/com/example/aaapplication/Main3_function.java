@@ -17,6 +17,10 @@ public class Main3_function extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3_function);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
+
 //        返回按钮
         Button btn_go = (Button)findViewById(R.id.main3_btn_back);
         btn_go.setOnClickListener(new View.OnClickListener(){
@@ -33,17 +37,10 @@ public class Main3_function extends AppCompatActivity {
 //        体适能 选择  获取年龄
 
         // 获取传递的整数类型年龄数据
-        int age = getIntent().getIntExtra("age", 0);
+        int age = student.getAge();
 
 
         LinearLayout btn_fit = (LinearLayout) findViewById(R.id.btn_fit);
-//        btn_fit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Main3_function.this,Main6_age7_18.class);
-//                startActivity(intent);
-//            }
-//            });
 
 //        跳转不同页面
         if(age <= 6 && age >=3){
@@ -52,6 +49,7 @@ public class Main3_function extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Main3_function.this,Main5_age3_6.class);
+                    intent.putExtra("student", student);
                     startActivity(intent);
                 }
             });
@@ -60,14 +58,13 @@ public class Main3_function extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Main3_function.this,Main6_age7_18.class);
+                    intent.putExtra("student", student);
                     startActivity(intent);
                 }
             });
         }
 
         // 获取点击时传过来的student，用于渲染页面
-        Intent intent = getIntent();
-        final List_stu student = (List_stu) intent.getSerializableExtra("student");
 
         //性别改头像
         ImageView imageView = findViewById(R.id.main3_picture);

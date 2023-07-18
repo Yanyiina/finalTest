@@ -29,6 +29,8 @@ public class Main5_sub3_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5_sub3_1);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
 
         //        按键播放视频
         videoView = (VideoView) findViewById(R.id.main5_sub3_1_videoView);
@@ -83,6 +85,7 @@ public class Main5_sub3_1 extends AppCompatActivity {
                     // 倒计时完成时触发
                     Intent intent = new Intent(Main5_sub3_1.this, Main5_sub3_2.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    intent.putExtra("student", student);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
 //                timeText.setText("Done");
@@ -101,6 +104,7 @@ public class Main5_sub3_1 extends AppCompatActivity {
                     countDownTimer = null;
                 }
                 Intent intent = new Intent(Main5_sub3_1.this,Main5_age3_6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
             }

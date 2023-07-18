@@ -14,12 +14,16 @@ public class Main5_sub2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5_sub2);
 
+        Intent intent = getIntent();
+        final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
         //        返回按钮
         Button main5_sub2_back = (Button) findViewById(R.id.main5_sub2_back);
         main5_sub2_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main5_sub2.this,Main5_age3_6.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
@@ -30,11 +34,9 @@ public class Main5_sub2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main5_sub2.this, Main5_sub2_1.class);
+                intent.putExtra("student", student);
                 startActivity(intent);
             }
         });
-
-
-//
     }
 }
