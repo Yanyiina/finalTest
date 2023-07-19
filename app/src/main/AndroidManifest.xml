@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main6_age_bmi"></activity>
+        <activity android:name=".Main_nobinding"></activity>
+        <activity android:name=".Main6_age_bmi" />
         <activity android:name=".Main6_age7_18_bmi" />
         <activity android:name=".Main5_age_bmi" />
         <activity android:name=".Main5_age3_6_bmi" />

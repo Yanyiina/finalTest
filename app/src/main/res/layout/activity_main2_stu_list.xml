@@ -124,7 +124,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:layout_alignParentRight="true">
-                <Button
+                <TextView
                     android:id="@+id/main2_btn_go_lastPage"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -138,11 +138,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <Button
+                    <TextView
                         android:id="@+id/main2_load_page"
                         android:layout_width="70dp"
                         android:layout_height="40dp"
                         android:layout_marginRight="15dp"
+                        android:gravity="center"
                         android:background="@drawable/color_main_press2"
                         android:text="4/100"
                         android:textColor="#fff"
@@ -151,7 +152,7 @@
                 </LinearLayout>
 
 
-                <Button
+                <TextView
                     android:id="@+id/main2_btn_go_nextPage"
                     android:layout_width="40dp"
                     android:layout_height="40dp"

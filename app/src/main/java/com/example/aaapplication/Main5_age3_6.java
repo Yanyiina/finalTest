@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Main5_age3_6 extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class Main5_age3_6 extends AppCompatActivity {
         });
 
 //        点击 单腿站立 按钮
-        Button main5_btn2 = (Button) findViewById(R.id.main5_btn2);
+        TextView main5_btn2 = (TextView) findViewById(R.id.main5_btn2);
         main5_btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +42,7 @@ public class Main5_age3_6 extends AppCompatActivity {
 
 
 //        点击 身体支撑 按钮
-        Button main5_btn1 = (Button) findViewById(R.id.main5_btn1);
+        TextView main5_btn1 = (TextView) findViewById(R.id.main5_btn1);
         main5_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +54,7 @@ public class Main5_age3_6 extends AppCompatActivity {
 
 
 //        点击 垂直纵跳 按钮
-        Button main5_btn3 = (Button) findViewById(R.id.main5_btn3);
+        TextView main5_btn3 = (TextView) findViewById(R.id.main5_btn3);
         main5_btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +65,7 @@ public class Main5_age3_6 extends AppCompatActivity {
         });
 
 //         点击 原地开合跳 按钮
-        Button main5_btn4 = (Button) findViewById(R.id.main5_btn4);
+        TextView main5_btn4 = (TextView) findViewById(R.id.main5_btn4);
         main5_btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +77,7 @@ public class Main5_age3_6 extends AppCompatActivity {
 
 
 //        点击 反应时评估 按钮
-        Button main5_btn5 = (Button) findViewById(R.id.main5_btn5);
+        TextView main5_btn5 = (TextView) findViewById(R.id.main5_btn5);
         main5_btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +89,7 @@ public class Main5_age3_6 extends AppCompatActivity {
 
 
         //        点击 身体形态 按钮
-        Button main5_btn6 = (Button) findViewById(R.id.main5_btn6);
+        TextView main5_btn6 = (TextView) findViewById(R.id.main5_btn6);
         main5_btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

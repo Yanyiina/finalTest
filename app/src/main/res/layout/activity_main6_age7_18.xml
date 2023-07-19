@@ -55,38 +55,99 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:gravity="left"
-                    android:layout_marginRight="10dp">
-                    <Button
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn7"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
                         android:text="身体形态"
                         android:textColor="#fff"
                         android:textSize="12dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main6_tu1_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
-                    <Button
+                    android:layout_height="60dp"
+                    android:gravity="right"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn1"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
+
                         android:text="一分钟仰卧起坐"
                         android:textColor="#fff"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:textSize="12dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:drawableLeft="@drawable/main6_tu1_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -102,38 +163,98 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:gravity="left"
-                    android:layout_marginRight="10dp">
-                    <Button
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn2"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
                         android:text="单腿站立"
                         android:textColor="#fff"
                         android:textSize="12dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu2_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
-                    <Button
+                    android:layout_height="60dp"
+                    android:gravity="right"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn3"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
                         android:text="垂直纵跳"
                         android:textColor="#fff"
                         android:textSize="12dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu3_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -149,38 +270,98 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:gravity="left"
-                    android:layout_marginRight="10dp">
-                    <Button
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn4"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
                         android:text="30秒连续跳"
                         android:textColor="#fff"
                         android:textSize="12dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="30dp"
                         android:drawableLeft="@drawable/main6_tu4_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
-                    <Button
+                    android:layout_height="60dp"
+                    android:gravity="right"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn5"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
                         android:text="俯卧撑"
                         android:textColor="#fff"
                         android:textSize="12dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="60dp"
                         android:drawableLeft="@drawable/main6_tu5_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -197,20 +378,50 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:gravity="left"
-                    android:layout_marginRight="10dp">
-                    <Button
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/color_small_btn"
+                    android:orientation="vertical">
+                    <TextView
                         android:id="@+id/main6_btn6"
                         android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
+                        android:layout_height="50dp"
                         android:text="十字象限跳"
                         android:textColor="#fff"
                         android:textSize="12dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="30dp"
                         android:drawableLeft="@drawable/main6_tu6_wid"/>
+
+                    <!--历史记录与日期-->
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@drawable/date_before"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="上次评估： 13cm"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023.06.09 - 10.20"
+                            android:textColor="#e6ffffff"
+                            android:textSize="6sp"/>
+
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
                 <LinearLayout

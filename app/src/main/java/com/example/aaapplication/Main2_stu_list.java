@@ -50,7 +50,7 @@ public class Main2_stu_list extends AppCompatActivity {
         // 设置 typeface, 就是字体文件
         btn1.setTypeface(iconfont);
 
-        Button lastPage = findViewById(R.id.main2_btn_go_lastPage);
+        TextView lastPage = findViewById(R.id.main2_btn_go_lastPage);
         lastPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +61,7 @@ public class Main2_stu_list extends AppCompatActivity {
             }
         });
 
-        Button nextPage = findViewById(R.id.main2_btn_go_nextPage);
+        TextView nextPage = findViewById(R.id.main2_btn_go_nextPage);
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +128,7 @@ public class Main2_stu_list extends AppCompatActivity {
                     int anInt = json.getJSONObject("data").getInt("count");
                     if(anInt % 10 == 0) totalPage = anInt / pageSize;
                     else totalPage = anInt / pageSize + 1;
-                    Button viewById = findViewById(R.id.main2_load_page);
+                    TextView viewById = findViewById(R.id.main2_load_page);
                     viewById.setText(currentPage + "/" + totalPage);
 
 
@@ -282,7 +282,7 @@ public class Main2_stu_list extends AppCompatActivity {
                 int anInt = json.getJSONObject("data").getInt("count");
                 if(anInt % 10 == 0) totalPage = anInt / pageSize;
                 else totalPage = anInt / pageSize + 1;
-                Button viewById = findViewById(R.id.main2_load_page);
+                TextView viewById = findViewById(R.id.main2_load_page);
                 viewById.setText(currentPage + "/" + totalPage);
 
                 // 存储 "list" 数据的列表
