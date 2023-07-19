@@ -126,7 +126,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="请保持双手自然垂放，并看向镜面，保持静止"
-                android:textColor="#FFF"
+                android:textColor="#e6ffffff"
                 />
 
         </LinearLayout>

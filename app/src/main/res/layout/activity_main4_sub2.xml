@@ -34,7 +34,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="放松环节"
-                    android:textColor="#FFF"
+                    android:textColor="#e6ffffff"
                     android:textSize="40dp"/>
 
             </RelativeLayout>
@@ -146,7 +146,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="接下来，您将进行体态评估。在评估前请先在\n1分钟做10次原地踏步，放松肌肉。"
-                android:textColor="#FFF"
+                android:textColor="#e6ffffff"
                 />
 
         </LinearLayout>

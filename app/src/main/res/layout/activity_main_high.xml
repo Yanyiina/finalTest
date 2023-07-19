@@ -79,6 +79,7 @@
                                 android:digits="0123456789."
                                 android:clickable="true"
                                 android:focusable="true"
+                                android:gravity="center"
                                 />
                             <TextView
                                 android:layout_width="wrap_content"
@@ -139,7 +140,9 @@
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/edittext_bottom"
-                                android:textColor="#fff" />
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -176,12 +179,12 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="50dp">
                     <Button
                         android:id="@+id/main_high_next"
-                        android:layout_width="60dp"
+                        android:layout_width="150dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/main5_btn_tiaoguo"
+                        android:background="@drawable/color_main_bmi_no"
                         android:text="下一步"
                         android:textColor="#fff"/>
                 </LinearLayout>

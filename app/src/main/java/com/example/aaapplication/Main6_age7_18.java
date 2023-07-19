@@ -94,6 +94,18 @@ public class Main6_age7_18 extends AppCompatActivity {
             }
         });
 
+        //        点击 身体形态 按钮
+        Button main6_btn7 = (Button) findViewById(R.id.main6_btn7);
+        main6_btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main6_age7_18.this,Main6_age7_18_bmi.class);
+                intent.putExtra("student", student);
+                startActivity(intent);
+            }
+        });
+
+
 
 //
     }

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main5_age_bmi"
-    android:orientation="vertical"
+    tools:context=".Main6_age_bmi"
     android:background="@color/main_background">
 
     <RelativeLayout
@@ -213,7 +212,7 @@
                         android:gravity="bottom">
                         <!--返回按钮-->
                         <Button
-                            android:id="@+id/main5_sub6_3_back"
+                            android:id="@+id/main6_sub7_3_back"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginRight="10dp"
@@ -226,7 +225,7 @@
                             android:textSize="5dp" />
                         <!--下一个项目-->
                         <LinearLayout
-                            android:id="@+id/main5_sub6_3_start"
+                            android:id="@+id/main6_sub7_3_start"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="6"
@@ -243,14 +242,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="身体支撑"
+                                android:text="一分钟仰卧起坐"
                                 android:textSize="10dp"
                                 android:textColor="#fff"/>
                         </LinearLayout>
 
                         <!--查看报告-->
                         <Button
-                            android:id="@+id/main5_sub6_3_check"
+                            android:id="@+id/main6_sub7_3_check"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="3"
@@ -280,7 +279,7 @@
             android:layout_centerVertical="true"
             >
             <TextView
-                android:id="@+id/main5_sub6_3_exist"
+                android:id="@+id/main6_sub7_3_exist"
                 android:layout_width="60dp"
                 android:layout_height="35dp"
                 android:paddingTop="4dp"
