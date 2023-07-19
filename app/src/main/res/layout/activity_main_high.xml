@@ -70,6 +70,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <EditText
+                                    android:id="@+id/main_high_height"
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:textColor="#fff"
@@ -137,6 +138,7 @@
                             android:orientation="horizontal">
 
                             <EditText
+                                    android:id="@+id/main_high_weight"
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/edittext_bottom"
