@@ -58,12 +58,26 @@
                 android:layout_width="fill_parent"
                 android:layout_height="60dp"
                 >
+                <TextView
+                    android:id="@+id/view6"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/main4_arr"
+                    android:text="身高体重"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="8dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:drawableTop="@drawable/main4_view1_wid"
+                    />
                     <TextView
                             android:id="@+id/view1"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="1"
-                            android:background="@drawable/main4_arr"
+                            android:background="@drawable/main4_arr2"
                             android:text="站位指引"
                             android:paddingTop="10dp"
                             android:paddingRight="10dp"

@@ -34,7 +34,7 @@ public class Main_high extends AppCompatActivity {
         Intent intent = getIntent();
         final List_stu student = (List_stu) intent.getSerializableExtra("student");
 
-        TextView btn_go = (TextView) findViewById(R.id.main_high_exist);
+        final TextView btn_go = (TextView) findViewById(R.id.main_high_exist);
         btn_go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +70,7 @@ public class Main_high extends AppCompatActivity {
                 }
 
                 if(student.getHeight() >= minHeight && student.getHeight() <= maxHeight && student.getWeight() >= minWeight && student.getWeight() <= maxWeight){
+                    btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
                     Intent intent = new Intent(Main_high.this,Main4_sub1.class);
                     intent.putExtra("student", student);
                     startActivity(intent);
@@ -92,6 +93,7 @@ public class Main_high extends AppCompatActivity {
                         String weightInput = weightEditText.getText().toString();
 
                         if (!heightInput.isEmpty() && !weightInput.isEmpty()) {
+                            btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
                             btn_pose_go.setEnabled(true);
                         } else {
                             btn_pose_go.setEnabled(false);
@@ -114,6 +116,7 @@ public class Main_high extends AppCompatActivity {
                         String weightInput = s.toString();
 
                         if (!heightInput.isEmpty() && !weightInput.isEmpty()) {
+                            btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
                             btn_pose_go.setEnabled(true);
                         } else {
                             btn_pose_go.setEnabled(false);

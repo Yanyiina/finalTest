@@ -78,6 +78,7 @@
                                 android:padding="8dp"
                                 android:inputType="number|numberDecimal"
                                 android:digits="0123456789."
+                                android:maxLength="6"
                                 android:clickable="true"
                                 android:focusable="true"
                                 android:gravity="center"
@@ -87,6 +88,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text=" cm"
+
                                 android:textColor="#fff"
                                 android:textSize="18sp"/>
 
@@ -138,12 +140,15 @@
                             android:orientation="horizontal">
 
                             <EditText
-                                    android:id="@+id/main_high_weight"
+                                android:id="@+id/main_high_weight"
                                 android:layout_width="65dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/edittext_bottom"
                                 android:textColor="#fff"
                                 android:gravity="center"
+                                android:inputType="number|numberDecimal"
+                                android:digits="0123456789."
+                                android:maxLength="5"
                                 />
 
                             <TextView
