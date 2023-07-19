@@ -69,7 +69,7 @@ public class Main_high extends AppCompatActivity {
                     btn_pose_go.setEnabled(false);
                 }
 
-                if(student.getHeight() >= minHeight && student.getHeight() <= maxHeight && student.getWeight() >= minWeight && student.getWeight() <= maxWeight){
+                if(!heightInput.isEmpty() && !weightInput.isEmpty() && student.getHeight() >= minHeight && student.getHeight() <= maxHeight && student.getWeight() >= minWeight && student.getWeight() <= maxWeight){
                     btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
                     Intent intent = new Intent(Main_high.this,Main4_sub1.class);
                     intent.putExtra("student", student);
@@ -93,6 +93,8 @@ public class Main_high extends AppCompatActivity {
                         String weightInput = weightEditText.getText().toString();
 
                         if (!heightInput.isEmpty() && !weightInput.isEmpty()) {
+                            System.out.println(heightInput);
+                            System.out.println(weightInput);
                             btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
                             btn_pose_go.setEnabled(true);
                         } else {
@@ -114,8 +116,9 @@ public class Main_high extends AppCompatActivity {
                     public void afterTextChanged(Editable s) {
                         String heightInput = heightEditText.getText().toString();
                         String weightInput = s.toString();
-
                         if (!heightInput.isEmpty() && !weightInput.isEmpty()) {
+                            System.out.println(heightInput);
+                            System.out.println(weightInput);
                             btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
                             btn_pose_go.setEnabled(true);
                         } else {
@@ -196,15 +199,17 @@ public class Main_high extends AppCompatActivity {
                                 }
                             });
                         }
-                    }
 
+                        if (!jsonObject.getString("measured_result").equals("") && !jsonObject.getString("measured_result").equals("")) {
+                            btn_pose_go.setBackgroundResource(R.drawable.color_main_bmi);
+                            btn_pose_go.setEnabled(true);
+                        }
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }).start();
-
-
-//
+//原始
     }
 }

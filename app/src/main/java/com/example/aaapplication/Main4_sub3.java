@@ -70,6 +70,8 @@ public class Main4_sub3 extends AppCompatActivity {
         // 启动倒计时定时器
         countDownTimer.start();
 
+        
+
     }
 
     @Override

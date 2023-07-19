@@ -36,6 +36,7 @@ public class Main2_stu_list extends AppCompatActivity {
     private int currentPage = 1;
     private int totalPage = 1;
     private int pageSize = 10;
+    private String childName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,11 +212,11 @@ public class Main2_stu_list extends AppCompatActivity {
                 // 当文本改变时执行的逻辑
                 String searchText = s.toString().trim();
                 System.out.println(searchText);
-                if (searchText.length() >= 1) {
-                    filterList(searchText);
-                } else {
-                    adapter.updateData(originalList);
-                }
+//                if (searchText.length() >= 1) {
+                filterList(searchText);
+//                } else {
+//                    adapter.updateData(originalList);
+//                }
             }
 
             public void afterTextChanged(Editable s) {
@@ -225,20 +226,25 @@ public class Main2_stu_list extends AppCompatActivity {
 
     private void filterList(String searchText) {
         List<List_stu> filteredList = new ArrayList<>();
+        childName = searchText;
 
+//        if (searchText.isEmpty()) {
+//            // 输入为空时显示所有人,重新
+//            new LoadPageTask().execute();
+//        } else {
+//            // 检索
+//
+//        }
         if (searchText.isEmpty()) {
-            // 输入为空时显示所有人
-            filteredList.addAll(originalList);
+            // 输入为空时重新加载数据
+            currentPage = 1;
+            System.out.println("标记");
+            new LoadPageTask().execute();
         } else {
-            for (List_stu student : originalList) {
-                String childName = student.getChild_name();
-
-                if (childName.toLowerCase().contains(searchText.toLowerCase())) {
-                    filteredList.add(student);
-                }
-            }
+            // 进行搜索
+            new LoadPageTask().execute();
         }
-        adapter.updateData(filteredList);
+//        adapter.updateData(filteredList);
     }
 
     private class LoadPageTask extends AsyncTask<Void, Void, Void> {
@@ -247,7 +253,15 @@ public class Main2_stu_list extends AppCompatActivity {
             // 在后台执行网络请求的逻辑
             try {
                 // 发送HTTP请求获取JSON数据
-                URL url = new URL("https://transferapi.imreliable.com/hardware/child/list?page=" + currentPage +"&limit="+ pageSize +"&type=1");
+                URL url;
+                if(childName == null || childName.isEmpty()) {
+                    System.out.println("111111");
+                    url = new URL("https://transferapi.imreliable.com/hardware/child/list?page=" + currentPage + "&limit=" + pageSize + "&type=1");
+                }else {
+                    System.out.println("222222");
+                    url = new URL("https://transferapi.imreliable.com/hardware/child/list?page=" + currentPage + "&limit=" + pageSize + "&type=1" + "&child_name=" + childName);
+                }
+
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
 
