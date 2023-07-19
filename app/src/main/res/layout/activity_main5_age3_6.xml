@@ -60,11 +60,11 @@
                     android:layout_marginRight="10dp"
                     android:orientation="vertical">
                     <Button
-                        android:id="@+id/main5_btn1"
+                        android:id="@+id/main5_btn6"
                         android:layout_width="fill_parent"
                         android:layout_height="60dp"
                         android:background="@drawable/color_small_btn"
-                        android:text="身体支撑"
+                        android:text="身体形态"
                         android:textColor="#fff"
                         android:textSize="12dp"
                         android:paddingLeft="20dp"
@@ -97,16 +97,16 @@
                     android:layout_height="wrap_content"
                     android:gravity="right">
                     <Button
-                        android:id="@+id/main5_btn2"
+                        android:id="@+id/main5_btn1"
                         android:layout_width="fill_parent"
                         android:layout_height="60dp"
                         android:background="@drawable/color_small_btn"
-                        android:text="单腿站立"
+                        android:text="身体支撑"
                         android:textColor="#fff"
                         android:textSize="12dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
-                        android:drawableLeft="@drawable/main5_tu2_wid"/>
+                        android:drawableLeft="@drawable/main5_tu1_wid"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -126,6 +126,24 @@
                     android:gravity="left"
                     android:layout_marginRight="10dp">
                     <Button
+                        android:id="@+id/main5_btn2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/color_small_btn"
+                        android:text="单腿站立"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="50dp"
+                        android:drawableLeft="@drawable/main5_tu2_wid"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+                    <Button
                         android:id="@+id/main5_btn3"
                         android:layout_width="fill_parent"
                         android:layout_height="60dp"
@@ -136,24 +154,6 @@
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu3_wid"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
-                    <Button
-                        android:id="@+id/main5_btn4"
-                        android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:background="@drawable/color_small_btn"
-                        android:text="原地开合跳"
-                        android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="30dp"
-                        android:drawableLeft="@drawable/main5_tu4_wid"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -173,6 +173,24 @@
                     android:gravity="left"
                     android:layout_marginRight="10dp">
                     <Button
+                        android:id="@+id/main5_btn4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/color_small_btn"
+                        android:text="原地开合跳"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="30dp"
+                        android:drawableLeft="@drawable/main5_tu4_wid"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+                    <Button
                         android:id="@+id/main5_btn5"
                         android:layout_width="fill_parent"
                         android:layout_height="60dp"
@@ -183,18 +201,6 @@
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:drawableLeft="@drawable/main5_tu5_wid"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="right">
-                    <View
-                        android:id="@+id/main5_btn6"
-                        android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                         />
                 </LinearLayout>
 
             </LinearLayout>
