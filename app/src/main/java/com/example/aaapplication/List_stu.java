@@ -10,6 +10,25 @@ public class List_stu  implements Serializable {
     private Integer type;
     private Integer gender;
     private Integer age;
+    // 身高 体重
+    private Double height;
+    private Double weight;
+
+    public Double getHeight() {
+        return height;
+    }
+
+    public void setHeight(Double height) {
+        this.height = height;
+    }
+
+    public Double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
 
     public Integer getAge() {
         return age;
@@ -31,12 +50,14 @@ public class List_stu  implements Serializable {
         this.gender = gender;
     }
 
-    public List_stu(Integer ID, String child_name, Integer type, Integer gender, Integer age, String parent_phone, String tag_id_list, String[] tag_list) {
+    public List_stu(Integer ID, String child_name, Integer type, Integer gender, Integer age, Double height, Double weight, String parent_phone, String tag_id_list, String[] tag_list) {
         this.ID = ID;
         this.child_name = child_name;
         this.type = type;
         this.gender = gender;
         this.age = age;
+        this.height = height;
+        this.weight = weight;
         this.parent_phone = parent_phone;
         this.tag_id_list = tag_id_list;
         this.tag_list = tag_list;
@@ -104,4 +125,5 @@ public class List_stu  implements Serializable {
                 ", tag_list=" + tag_list +
                 '}';
     }
+
 }
