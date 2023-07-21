@@ -2,11 +2,10 @@
     <!-- 背景 -->
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <solid android:color="@color/main3_background" /> <!-- 背景颜色为白色 -->
-            <corners android:radius="20dp" /> <!-- 圆角半径为20dp -->
+            <corners android:radius="98dp" /> <!-- 圆角半径为20dp -->
             <stroke
                     android:color="#FFFFFF"
-                    android:width="2dp" /> <!-- 边框为白色，宽度为2dp -->
+                    android:width="1dp" /> <!-- 边框为白色，宽度为2dp -->
         </shape>
     </item>
 
@@ -18,8 +17,11 @@
                android:insetBottom="2dp">
             <clip>
                 <shape android:shape="rectangle">
-                    <solid android:color="@color/btn_normal" /> <!-- 进度颜色为黑色 -->
-                    <corners android:radius="20dp" /> <!-- 圆角半径为20dp -->
+                    <corners android:radius="98dp" />
+                    <gradient
+                        android:startColor="#FFDB6B80"
+                        android:endColor="#FFDE3151"
+                        android:angle="0" />
                 </shape>
             </clip>
         </inset>

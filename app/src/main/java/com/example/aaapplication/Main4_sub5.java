@@ -27,7 +27,7 @@ public class Main4_sub5 extends AppCompatActivity {
         Intent intent = getIntent();
         final List_stu student = (List_stu) intent.getSerializableExtra("student");
 
-        Button btn_exist = (Button) findViewById(R.id.main4_sub2_exist);
+        TextView btn_exist = (TextView) findViewById(R.id.main4_sub5_exist);
         btn_exist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

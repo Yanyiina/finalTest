@@ -30,7 +30,7 @@ public class main4_sub4 extends AppCompatActivity {
 
         // 用户退出
         // 用户点击后，返回上一层页面
-        Button btn_exist = (Button)findViewById(R.id.main4_sub2_exist);
+        TextView btn_exist = (TextView) findViewById(R.id.main4_sub4_exist);
         btn_exist.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

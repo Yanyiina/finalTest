@@ -60,15 +60,16 @@
             android:orientation="horizontal"
             android:padding="5dp"
             android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
             >
             <EditText
                 android:id="@+id/main2_search_edit"
                 android:layout_width="0dp"
                 android:layout_height="80px"
                 android:layout_weight="8"
-                android:drawableLeft="@drawable/main2_search_left"
+                android:drawableLeft="@drawable/main2_search_left_wid"
                 android:background="@drawable/main2_stu_search"
-                android:hint="搜索"
+                android:hint="    搜索"
                 android:paddingLeft="10dp"
                 android:layout_marginRight="20dp"
                 android:textColorHint="#b7b7b7"
@@ -78,7 +79,8 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/main2_btn_add"
@@ -99,6 +101,7 @@
             android:layout_height="0dp"
             android:layout_weight="8"
             android:orientation="vertical"
+            android:paddingTop="10dp"
             >
 
             <ListView
@@ -117,7 +120,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:visibility="visible">
+            android:visibility="visible"
+            >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -126,12 +130,12 @@
                 android:layout_alignParentRight="true">
                 <TextView
                     android:id="@+id/main2_btn_go_lastPage"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:background="@drawable/color_main_press"
                     android:layout_marginRight="15dp"
                     android:paddingRight="10dp"
-                    android:drawableRight="@drawable/main3_back_wid"/>
+                    android:drawableRight="@drawable/arr_left_wid"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -141,7 +145,7 @@
                     <TextView
                         android:id="@+id/main2_load_page"
                         android:layout_width="70dp"
-                        android:layout_height="40dp"
+                        android:layout_height="36dp"
                         android:layout_marginRight="15dp"
                         android:gravity="center"
                         android:background="@drawable/color_main_press2"
@@ -154,8 +158,8 @@
 
                 <TextView
                     android:id="@+id/main2_btn_go_nextPage"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:background="@drawable/color_main_press"
                     android:paddingRight="10dp"
                     android:drawableRight="@drawable/main3_back_wid"
@@ -193,7 +197,7 @@
                     android:padding="5dp"
                     android:text="退出"
                     android:textColor="#fff"
-                    android:textSize="5dp" />
+                    android:textSize="8dp" />
                 <!--非学员按钮-->
                 <Button
                     android:id="@+id/main2_btn_not_stu"
