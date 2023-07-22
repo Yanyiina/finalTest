@@ -37,6 +37,10 @@
             </RelativeLayout>
 
         </LinearLayout>
+        <SurfaceView
+                android:id="@+id/surfaceView1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
 
         <!-- 第二块 -->
         <LinearLayout
@@ -62,6 +66,7 @@
             </TextView>
 
         </LinearLayout>
+
 
         <RelativeLayout
                 android:id="@+id/process_and_time"
@@ -156,16 +161,16 @@
         android:layout_centerVertical="true"
         >
         <TextView
-            android:id="@+id/main4_sub3_exist"
-            android:layout_width="60dp"
-            android:layout_height="35dp"
-            android:paddingTop="4dp"
-            android:gravity="center"
-            android:background="@drawable/btn_main5_sub_over"
-            android:text="结束测试"
-            android:textColor="#fff"
-            android:textSize="8dp"
-            android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
+                android:id="@+id/main4_sub4_exist"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:paddingTop="4dp"
+                android:gravity="center"
+                android:background="@drawable/btn_main5_sub_over"
+                android:text="结束测试"
+                android:textColor="#fff"
+                android:textSize="8dp"
+                android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
     </RelativeLayout>
 
 </RelativeLayout>
