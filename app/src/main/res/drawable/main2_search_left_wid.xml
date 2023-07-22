@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/main3_btn_arr"
-        android:width="30dp"
-        android:height="30dp"/>
+        android:drawable="@drawable/main2_search_left"
+        android:width="20dp"
+        android:height="20dp"/>
 </layer-list>
