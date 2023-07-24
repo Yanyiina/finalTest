@@ -24,7 +24,5 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGHT);
-
-
     }
 }

@@ -45,7 +45,10 @@
             >
 
 
-
+            <SurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
         </LinearLayout>
 
         <RelativeLayout
@@ -107,9 +110,9 @@
                 android:layout_centerInParent="true">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/main4_sub3_scan_wid"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/main4_sub3_scan_wid"/>
 
 
             </RelativeLayout>
