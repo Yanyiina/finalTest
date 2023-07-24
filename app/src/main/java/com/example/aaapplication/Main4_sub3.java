@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 
+import static com.example.utils.OssUploader.segmentImage;
 import static com.example.utils.OssUploader.uploadImageToOSS;
 
 
@@ -94,14 +95,14 @@ public class Main4_sub3 extends AppCompatActivity implements SurfaceHolder.Callb
         timeText = findViewById(R.id.timeText);
 
         // 设置进度条的最大值为 60（1分钟）
-        progressBar.setMax(60);
+        progressBar.setMax(30);
 
         // 创建并启动倒计时定时器
-        countDownTimer = new CountDownTimer(10000, 1000) {
+        countDownTimer = new CountDownTimer(30000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 // 每秒更新进度条和时间文本
-                int progress = (int) (10000 - millisUntilFinished) / 1000;
+                int progress = (int) (30000 - millisUntilFinished) / 1000;
                 progressBar.setProgress(progress);
                 timeText.setText(formatTime(millisUntilFinished));
             }
@@ -111,6 +112,12 @@ public class Main4_sub3 extends AppCompatActivity implements SurfaceHolder.Callb
                 // 定时器结束时的操作
                 progressBar.setProgress(60);
                 timeText.setText("01:00");
+
+                if(back != null){
+                    student.setPositive_points(back[0]);
+                    student.setPositive_height(back[1]);
+                    student.setPositive_url(back[2]);
+                }
 
                 // 跳转下一页面
                 Intent intent = new Intent(Main4_sub3.this, main4_sub4.class);
@@ -238,6 +245,8 @@ public class Main4_sub3 extends AppCompatActivity implements SurfaceHolder.Callb
                         savePhoto(data);
                         upload(data);
 
+                        // segmentImage()
+
                         //倒计时停止
                         mCountDownTimer.cancel();
                         // 相机预览
@@ -261,12 +270,21 @@ public class Main4_sub3 extends AppCompatActivity implements SurfaceHolder.Callb
                     future.thenAccept(result -> {
                         if(result != null){
                             back = result;
+                            ObjectMapper objectMapper = new ObjectMapper();
+                            JsonNode jsonNode = null;
+                            try {
+                                jsonNode = objectMapper.readTree(back[1]);
+                            } catch (JsonProcessingException e) {
+                                e.printStackTrace();
+                            }
+                            // 获取"lag2"后面的值
+                            back[1] = jsonNode.get("height").toString();
+                            System.out.println("+++++0" + back[0]);
                             System.out.println("+++++1" + back[1]);
+                            System.out.println("+++++2" + back[2]);
                         }
                     });
                 }
-
-
             }
         }).start();
 

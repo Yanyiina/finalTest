@@ -46,14 +46,14 @@ public class my_Process extends AppCompatActivity {
         timeText = time_id;
 
         // 设置进度条的最大值为 60（1分钟）
-        progressBar.setMax(60);
+        progressBar.setMax(30);
 
         // 创建并启动倒计时定时器
-        countDownTimer = new CountDownTimer(60000, 1000) {
+        countDownTimer = new CountDownTimer(30000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 // 每秒更新进度条和时间文本
-                int progress = (int) (60000 - millisUntilFinished) / 1000;
+                int progress = (int) (30000 - millisUntilFinished) / 1000;
                 progressBar.setProgress(progress);
                 timeText.setText(formatTime(millisUntilFinished));
             }
@@ -61,8 +61,8 @@ public class my_Process extends AppCompatActivity {
             @Override
             public void onFinish() {
                 // 定时器结束时的操作
-                progressBar.setProgress(60);
-                timeText.setText("01:00");
+                progressBar.setProgress(30);
+                timeText.setText("00:30");
             }
         };
 

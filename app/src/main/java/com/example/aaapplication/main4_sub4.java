@@ -23,6 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.concurrent.CompletableFuture;
 
 import static com.example.utils.OssUploader.uploadImageToOSS;
 
@@ -40,6 +41,8 @@ public class main4_sub4 extends AppCompatActivity implements SurfaceHolder.Callb
     private String positive_img;
     private String positive_points = null;
     private String positive_heights = null;
+
+    private String back[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,8 @@ public class main4_sub4 extends AppCompatActivity implements SurfaceHolder.Callb
 
         Intent intent = getIntent();
         final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
+        System.out.println("sub4sub4sub4sub4sub4" + student.getPositive_points());
 
         // 用户退出
         // 用户点击后，返回上一层页面
@@ -112,20 +117,20 @@ public class main4_sub4 extends AppCompatActivity implements SurfaceHolder.Callb
                 my_process.start_process(progressBar, timeText);
                 //
                 takePhotoWithDelay(5);
-
-
-                    student.setPositive_height(positive_heights);
-                    student.setPositive_points(positive_points);
-                    System.out.println("+++++1" + positive_points);
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            if(back != null){
+                                student.setSide_points(back[0]);
+                                student.setSide_height(back[1]);
+                                student.setSide_url(back[2]);
+                            }
                             Intent intent = new Intent(main4_sub4.this, Main4_sub5.class);
                             intent.putExtra("student", student);
                             startActivity(intent);
                             finish();
                         }
-                    }, 60000);
+                    }, 30000);
                 }
         };
 
@@ -277,7 +282,28 @@ public class main4_sub4 extends AppCompatActivity implements SurfaceHolder.Callb
 //                // 获取"lag2"后面的值
 //                positive_heights = jsonNode.get("lag2").toString();
                 String imagePath = String.valueOf(savePhoto(data));
-                uploadImageToOSS(imagePath);
+                // uploadImageToOSS(imagePath);
+                CompletableFuture<String[]> future = uploadImageToOSS(imagePath);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    future.thenAccept(result -> {
+                        if(result != null){
+                            back = result;
+                            //将back2转为JSON格式，获取它的height属性
+                            ObjectMapper objectMapper = new ObjectMapper();
+                            JsonNode jsonNode = null;
+                            try {
+                                jsonNode = objectMapper.readTree(back[1]);
+                            } catch (JsonProcessingException e) {
+                                e.printStackTrace();
+                            }
+                            // 获取"lag2"后面的值
+                            back[1] = jsonNode.get("height").toString();
+                            System.out.println("+++++0" + back[0]);
+                            System.out.println("+++++1" + back[1]);
+                            System.out.println("+++++2" + back[2]);
+                        }
+                    });
+                }
             }
         }).start();
     }

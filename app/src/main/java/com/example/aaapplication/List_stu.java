@@ -17,10 +17,28 @@ public class List_stu  implements Serializable {
     private String positive_points;
     private String positive_height;
     private String positive_img;
+    private String positive_url;
     // 保存侧面体资体态相关结果
     private String side_img;
     private String side_height;
     private String side_points;
+    private String side_url;
+
+    public String getPositive_url() {
+        return positive_url;
+    }
+
+    public void setPositive_url(String positive_url) {
+        this.positive_url = positive_url;
+    }
+
+    public String getSide_url() {
+        return side_url;
+    }
+
+    public void setSide_url(String side_url) {
+        this.side_url = side_url;
+    }
 
     public String getPositive_points() {
         return positive_points;
