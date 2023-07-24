@@ -2,6 +2,7 @@ package com.example.aaapplication;
 
 
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -48,20 +49,21 @@ public class Main2_stu_list extends AppCompatActivity {
     private ArrayAdapter<String> adapter2;
     private ListView listViewSmall;
     private RelativeLayout mainLayout;
-
     private boolean isFirstSearchBoxClick = true;
 
-//    private RelativeLayout listLayout;
+    private ListView listLayout;
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_stu_list);
 
-//        加载 小列表
+//        加载列表
         showDialogButton = findViewById(R.id.main2_load_page);
         listViewSmall = findViewById(R.id.listView_small); // 获取ListView实例
+        listLayout = findViewById(R.id.main2_stu_list);
 
         pageList = new ArrayList<>();
         // 从数据库中获取页数数据并添加到pageList中
@@ -76,6 +78,7 @@ public class Main2_stu_list extends AppCompatActivity {
 
         // 获取整个布局的实例
         mainLayout = findViewById(R.id.linear_list_page);
+
 
         // 设置 TextView 的点击事件监听器
         showDialogButton.setOnClickListener(new View.OnClickListener() {
@@ -105,13 +108,23 @@ public class Main2_stu_list extends AppCompatActivity {
         // 设置根布局的点击事件监听器
         mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
-                public void onClick(View v) {
-                    // 当点击main2_load_page时，不执行隐藏列表的操作
-                    if (v.getId() != R.id.main2_load_page) {
-                        hideListView();
-                    }
-                }
+            public void onClick(View v) {
+                // 判断触摸点的位置是否在listViewSmall内
+                int[] listViewPos = new int[2];
+                listViewSmall.getLocationOnScreen(listViewPos);
+                int listViewLeft = listViewPos[0];
+                int listViewTop = listViewPos[1];
+                int listViewRight = listViewLeft + listViewSmall.getWidth();
+                int listViewBottom = listViewTop + listViewSmall.getHeight();
 
+                float x = v.getX();
+                float y = v.getY();
+
+                if (x < listViewLeft || x > listViewRight || y < listViewTop || y > listViewBottom) {
+                    // 点击的位置在listViewSmall以外，隐藏列表
+                    hideListView();
+                }
+            }
         });
 
 
@@ -422,6 +435,7 @@ public class Main2_stu_list extends AppCompatActivity {
         if (searchText.isEmpty()) {
             // 输入为空时重新加载数据
             currentPage = 1;
+            System.out.println("标记");
             new LoadPageTask().execute();
         } else {
             // 进行搜索
@@ -525,6 +539,16 @@ public class Main2_stu_list extends AppCompatActivity {
 
 
 //    列表加载
+// 处理显示列表点击事件
+//    public void onShowListClick(View view) {
+//        if (listViewSmall.getVisibility() == View.VISIBLE) {
+//            // 如果列表已经显示，则隐藏它
+//            hideListView();
+//        } else {
+//            // 如果列表尚未显示，则显示它
+//            showListView();
+//        }
+//    }
 
     // 隐藏列表
     private void hideListView() {

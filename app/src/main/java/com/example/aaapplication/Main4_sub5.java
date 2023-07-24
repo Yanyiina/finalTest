@@ -14,8 +14,12 @@ import com.example.utils.OssUploader;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -101,14 +105,16 @@ public class Main4_sub5 extends AppCompatActivity {
 
                             Result[] results = new Result[2];
                             Result result1 = new Result();
-                            result1.setProjectId(12);
+                            result1.setProjectId(student.getPositive_ID());
                             result1.setMeasuredResult( student.getHeight().intValue());
                             results[0] = result1;
+                            System.out.println("tctctc" + result1);
 
                             Result result2 = new Result();
-                            result2.setProjectId(13);
+                            result2.setProjectId(student.getSide_ID());
                             result2.setMeasuredResult(student.getWeight().intValue());
                             results[1] = result2;
+                            System.out.println("tctctc" + result2);
 
                             childInfo.setResult(results);
 
@@ -121,38 +127,127 @@ public class Main4_sub5 extends AppCompatActivity {
                                 e.printStackTrace();
                             }
 
-                            String url = "https://transferapi.imreliable.com/hardware/test/submitPosture";
-                            try {
-                                URL apiUrl = new URL(url);
-                                HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
-                                conn.setRequestMethod("POST");
-                                conn.setRequestProperty("Content-Type", "application/json");
-                                conn.setDoOutput(true);
+//                            String url = "https://transferapi.imreliable.com/hardware/test/submitPosture";
+//                            try {
+//                                URL apiUrl = new URL(url);
+//                                HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
+//                                conn.setRequestMethod("POST");
+//                                conn.setRequestProperty("Content-Type", "application/json");
+//                                conn.setDoOutput(true);
+//
+//                                // 将JSON对象写入请求体
+//                                try (OutputStream os = conn.getOutputStream()) {
+//                                    assert jsonString != null;
+//                                    byte[] input = jsonString.getBytes("utf-8");
+//                                    os.write(input, 0, input.length);
+//                                }
+//
+//                                // 获取响应
+//                                int responseCode = conn.getResponseCode();
+//                                System.out.println("Response Code: " + responseCode);
+//
+//                                // 处理响应内容
+//                                // ...
+//
+//                                conn.disconnect();
+//                            } catch (Exception e) {
+//                                e.printStackTrace();
+//                            }
+                            String finalJsonString = jsonString;
+                            CompletableFuture<Void> serverRequestFuture = CompletableFuture.runAsync(() -> {
+                                // 向服务器发送请求的代码
+                                // ...（服务器请求的代码）
+                                String url = "https://transferapi.imreliable.com/hardware/test/submitPosture";
+                                try {
+                                    URL apiUrl = new URL(url);
+                                    HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
+                                    conn.setRequestMethod("POST");
+                                    conn.setRequestProperty("Content-Type", "application/json");
+                                    conn.setDoOutput(true);
 
-                                // 将JSON对象写入请求体
-                                try (OutputStream os = conn.getOutputStream()) {
-                                    assert jsonString != null;
-                                    byte[] input = jsonString.getBytes("utf-8");
-                                    os.write(input, 0, input.length);
+
+                                    // 将JSON对象写入请求体
+                                    try (OutputStream os = conn.getOutputStream()) {
+                                        assert finalJsonString != null;
+                                        byte[] input = finalJsonString.getBytes("utf-8");
+                                        os.write(input, 0, input.length);
+                                    }
+
+                                    // 获取响应
+                                    int responseCode = conn.getResponseCode();
+                                    System.out.println("Response Code: " + responseCode);
+
+                                    conn.disconnect();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
                                 }
+                            });
 
-                                // 获取响应
-                                int responseCode = conn.getResponseCode();
-                                System.out.println("Response Code: " + responseCode);
 
-                                // 处理响应内容
-                                // ...
+                            serverRequestFuture.thenAccept(result -> {
+                                System.out.println("服务器请求完成");
+                                // 可以在这里更新UI或执行其他操作
+                                // ...（服务器请求完成后的处理代码）
+                                System.out.println("111111");
+                                CompletableFuture<Void> serverRequestFuture1 = CompletableFuture.runAsync(() -> {
+                                    // 向服务器发送GET请求的代码
+                                    String baseUrl = "https://transferapi.imreliable.com/hardware/test/reportViewUrl";
+                                    String queryParams = "?child_id=" + student.getID() + "&report_type=34";
+                                    String fullUrl = baseUrl + queryParams;
 
-                                conn.disconnect();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                                    try {
+                                        URL apiUrl = new URL(fullUrl);
+                                        HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
+                                        conn.setRequestMethod("GET");
+                                        conn.setRequestProperty("Content-Type", "application/json");
+
+                                        // 获取响应
+                                        int responseCode = conn.getResponseCode();
+                                        System.out.println("Response Code: " + responseCode);
+
+                                        // 解析响应内容
+                                        if (responseCode == HttpURLConnection.HTTP_OK) {
+                                            // 读取服务器返回的数据
+                                            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
+                                                StringBuilder response = new StringBuilder();
+                                                String line;
+                                                while ((line = reader.readLine()) != null) {
+                                                    response.append(line);
+                                                }
+
+                                                // 处理JSON数据
+                                                String jsonString1 = response.toString();
+                                                System.out.println("JSON Response: " + jsonString1);
+
+                                                // 在这里执行处理JSON数据的逻辑
+                                                // ...
+                                                JSONObject json = new JSONObject(response.toString());
+                                                String specification = json.getJSONObject("data").getString("url");
+                                                System.out.println("specification+++++" + specification);
+                                                student.setReportUrl(specification);
+                                            }
+                                        } else {
+                                            // 处理请求失败的情况
+                                            System.out.println("Server request failed with response code: " + responseCode);
+                                        }
+                                        conn.disconnect();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                });
+
+                                serverRequestFuture1.thenAccept(result3 -> {
+                                    System.out.println("服务器请求完成");
+                                    // 可以在这里更新UI或执行其他操作
+                                    // ...（服务器请求完成后的处理代码）
+                                    System.out.println("111111");
+                                });
+                            });
                         }
                     };
                     // 创建一个新的线程来执行上传操作
                     Thread uploadThread = new Thread(uploadTask);
                     uploadThread.start();
-
                 }
             });
         }
@@ -190,14 +285,16 @@ public class Main4_sub5 extends AppCompatActivity {
 
                             Result[] results = new Result[2];
                             Result result1 = new Result();
-                            result1.setProjectId(12);
+                            result1.setProjectId(student.getPositive_ID());
                             result1.setMeasuredResult( student.getHeight().intValue());
                             results[0] = result1;
+                            System.out.println("tctctc" + result1);
 
                             Result result2 = new Result();
-                            result2.setProjectId(13);
+                            result2.setProjectId(student.getSide_ID());
                             result2.setMeasuredResult(student.getWeight().intValue());
                             results[1] = result2;
+                            System.out.println("tctctc" + result2);
 
                             childInfo.setResult(results);
 
@@ -210,32 +307,95 @@ public class Main4_sub5 extends AppCompatActivity {
                                 e.printStackTrace();
                             }
 
-                            String url = "https://transferapi.imreliable.com/hardware/test/submitPosture";
-                            try {
-                                URL apiUrl = new URL(url);
-                                HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
-                                conn.setRequestMethod("POST");
-                                conn.setRequestProperty("Content-Type", "application/json");
-                                conn.setDoOutput(true);
+                            String finalJsonString = jsonString;
+                            CompletableFuture<Void> serverRequestFuture = CompletableFuture.runAsync(() -> {
+                                // 向服务器发送请求的代码
+                                // ...（服务器请求的代码）
+                                String url = "https://transferapi.imreliable.com/hardware/test/submitPosture";
+                                try {
+                                    URL apiUrl = new URL(url);
+                                    HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
+                                    conn.setRequestMethod("POST");
+                                    conn.setRequestProperty("Content-Type", "application/json");
+                                    conn.setDoOutput(true);
 
-                                // 将JSON对象写入请求体
-                                try (OutputStream os = conn.getOutputStream()) {
-                                    assert jsonString != null;
-                                    byte[] input = jsonString.getBytes("utf-8");
-                                    os.write(input, 0, input.length);
+
+                                    // 将JSON对象写入请求体
+                                    try (OutputStream os = conn.getOutputStream()) {
+                                        assert finalJsonString != null;
+                                        byte[] input = finalJsonString.getBytes("utf-8");
+                                        os.write(input, 0, input.length);
+                                    }
+
+                                    // 获取响应
+                                    int responseCode = conn.getResponseCode();
+                                    System.out.println("Response Code: " + responseCode);
+
+                                    conn.disconnect();
+                                } catch (Exception e) {
+                                    e.printStackTrace();
                                 }
+                            });
 
-                                // 获取响应
-                                int responseCode = conn.getResponseCode();
-                                System.out.println("Response Code: " + responseCode);
+                            serverRequestFuture.thenAccept(result -> {
+                                System.out.println("服务器请求完成");
+                                // 可以在这里更新UI或执行其他操作
+                                // ...（服务器请求完成后的处理代码）
+                                System.out.println("111111");
+                                CompletableFuture<Void> serverRequestFuture1 = CompletableFuture.runAsync(() -> {
+                                    // 向服务器发送GET请求的代码
+                                    String baseUrl = "https://transferapi.imreliable.com/hardware/test/reportViewUrl";
+                                    String queryParams = "?child_id=" + student.getID() + "&report_type=34";
+                                    String fullUrl = baseUrl + queryParams;
 
-                                // 处理响应内容
-                                // ...
+                                    try {
+                                        URL apiUrl = new URL(fullUrl);
+                                        HttpURLConnection conn = (HttpURLConnection) apiUrl.openConnection();
+                                        conn.setRequestMethod("GET");
+                                        conn.setRequestProperty("Content-Type", "application/json");
 
-                                conn.disconnect();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                                        // 获取响应
+                                        int responseCode = conn.getResponseCode();
+                                        System.out.println("Response Code: " + responseCode);
+
+                                        // 解析响应内容
+                                        if (responseCode == HttpURLConnection.HTTP_OK) {
+                                            // 读取服务器返回的数据
+                                            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
+                                                StringBuilder response = new StringBuilder();
+                                                String line;
+                                                while ((line = reader.readLine()) != null) {
+                                                    response.append(line);
+                                                }
+
+                                                // 处理JSON数据
+                                                String jsonString1 = response.toString();
+                                                System.out.println("JSON Response: " + jsonString1);
+
+                                                // 在这里执行处理JSON数据的逻辑
+                                                // ...
+                                                JSONObject json = new JSONObject(response.toString());
+                                                String specification = json.getJSONObject("data").getString("url");
+                                                System.out.println("specification+++++" + specification);
+                                                student.setReportUrl(specification);
+                                            }
+                                        } else {
+                                            // 处理请求失败的情况
+                                            System.out.println("Server request failed with response code: " + responseCode);
+                                        }
+                                        conn.disconnect();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                });
+
+                                serverRequestFuture1.thenAccept(result3 -> {
+                                    System.out.println("服务器请求完成");
+                                    // 可以在这里更新UI或执行其他操作
+                                    // ...（服务器请求完成后的处理代码）
+                                    System.out.println("111111");
+                                });
+                            });
                         }
                     };
                     // 创建一个新的线程来执行上传操作
@@ -244,6 +404,9 @@ public class Main4_sub5 extends AppCompatActivity {
                 }
             });
         }
+
+
+
 
         TextView btn_exist = findViewById(R.id.main4_sub5_exist);
         btn_exist.setOnClickListener(new View.OnClickListener() {
@@ -279,6 +442,11 @@ public class Main4_sub5 extends AppCompatActivity {
                 // 定时器结束时的操作
                 progressBar.setProgress(60);
                 timeText.setText("01:00");
+
+
+                Intent intent = new Intent(Main4_sub5.this, Main4_sub6.class);
+                intent.putExtra("student", student);
+                startActivity(intent);
                 finish();
             }
         };

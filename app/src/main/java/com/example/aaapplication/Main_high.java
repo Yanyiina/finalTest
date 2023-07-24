@@ -164,11 +164,15 @@ public class Main_high extends AppCompatActivity {
                         if(i == 0){
                             maxHeight = Double.parseDouble(item.getString("max_value"));
                             minHeight = Double.parseDouble(item.getString("min_value"));
+                            student.setPositive_ID(item.getInt("id"));
+                            System.out.println("++++++" + item.getInt("id"));
                         }
 
                         if(i == 1){
                             maxWeight = Double.parseDouble(item.getString("max_value"));
                             minWeight = Double.parseDouble(item.getString("min_value"));
+                            student.setSide_ID(item.getInt("id"));
+                            System.out.println("++++++" + item.getInt("id"));
                         }
 
                     }

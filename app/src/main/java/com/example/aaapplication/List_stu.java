@@ -24,6 +24,38 @@ public class List_stu  implements Serializable {
     private String side_points;
     private String side_url;
 
+    // 项目ID
+    private Integer positive_ID;
+    private Integer side_ID;
+
+    // 报告url
+
+    private String reportUrl;
+
+    public String getReportUrl() {
+        return reportUrl;
+    }
+
+    public void setReportUrl(String reportUrl) {
+        this.reportUrl = reportUrl;
+    }
+
+    public Integer getPositive_ID() {
+        return positive_ID;
+    }
+
+    public void setPositive_ID(Integer positive_ID) {
+        this.positive_ID = positive_ID;
+    }
+
+    public Integer getSide_ID() {
+        return side_ID;
+    }
+
+    public void setSide_ID(Integer side_ID) {
+        this.side_ID = side_ID;
+    }
+
     public String getPositive_url() {
         return positive_url;
     }
