@@ -162,6 +162,11 @@
                                             android:layout_height="wrap_content"
                                             android:background="@drawable/edittext_bottom"
                                             android:textColor="#fff"
+                                            android:inputType="number|numberDecimal"
+                                            android:digits="0123456789."
+                                            android:maxLength="5"
+                                            android:clickable="true"
+                                            android:focusable="true"
                                             android:gravity="center"/>
 
                                         <TextView
@@ -170,7 +175,8 @@
                                             android:layout_gravity="center"
                                             android:text=" kg"
                                             android:textColor="#fff"
-                                            android:textSize="18sp" />
+                                            android:textSize="18sp"
+                                            />
 
                                     </LinearLayout>
 

@@ -50,6 +50,8 @@ public class Main5_sub5_3 extends AppCompatActivity {
     private CountDownTimer mouseTimer;
     private TextView score;
 
+    private boolean gameEnded = false;
+
 
 
     @Override
@@ -244,7 +246,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
         mouseTimer = new CountDownTimer(totalTime, interval) {
             @Override
             public void onTick(long millisUntilFinished) {
-                if (gameStarted && mouseCount < maxMouseCount) {
+                if (gameStarted && mouseCount <= maxMouseCount) {
                     showMouseInRandomHole(student);
                 } else {
                     cancel();
@@ -253,7 +255,12 @@ public class Main5_sub5_3 extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                cancel();
+//                cancel();
+                if (!gameEnded) {
+                    gameEnded = true;
+                    stopWhackAMoleGame();
+                    navigateToAnotherActivity(student);
+                }
             }
         };
         mouseTimer.start();
@@ -261,12 +268,17 @@ public class Main5_sub5_3 extends AppCompatActivity {
 
     private void stopWhackAMoleGame() {
         gameStarted = false;
-        mouseCount = 0;
+//        mouseCount = 0;
 //        holeLayout.setOnClickListener(null);
         if (mouseTimer != null) {
             mouseTimer.cancel();
             mouseTimer = null;
         }
+        // 导航到下个页面，并传递得分数据
+        Intent intent = new Intent(Main5_sub5_3.this, Main5_sub5_4.class);
+        intent.putExtra("score", mouseCount); // 将当前的 mouseCount 作为得分传递到下个页面
+//        intent.putExtra("student", student); // 如果需要传递其他数据也可以一并传递
+        startActivity(intent);
     }
 
     private void showMouseInRandomHole(final List_stu student) {
@@ -280,12 +292,13 @@ public class Main5_sub5_3 extends AppCompatActivity {
         randomHoleLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (gameStarted && mouseCount < maxMouseCount) {
-                    mouseCount++;
+                if (gameStarted && mouseCount <= maxMouseCount) {
                     v.setVisibility(View.INVISIBLE);
+                    mouseCount++;
                     score.setText("得分为" + mouseCount);
                     if (mouseCount == maxMouseCount) {
-
+//                        mouseCount++;
+//                        score.setText("得分为"+ mouseCount);
                         stopWhackAMoleGame();
                         navigateToAnotherActivity(student);
                     }
