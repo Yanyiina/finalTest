@@ -108,12 +108,12 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_marginBottom="10dp"
-                    android:gravity="bottom">
+                    android:gravity="bottom"
+                    >
                     <!--返回按钮-->
                     <Button
-                        android:id="@+id/main5_sub3_3_back"
+                        android:id="@+id/main_setup_back"
                         android:layout_width="50dp"
-
                         android:layout_height="match_parent"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/btn_back"
@@ -121,7 +121,8 @@
                         android:padding="5dp"
                         android:text="返回"
                         android:textColor="#fff"
-                        android:textSize="5dp" />
+                        android:textSize="8dp"
+                        />
 
                 </LinearLayout>
 

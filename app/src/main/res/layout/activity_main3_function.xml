@@ -25,7 +25,7 @@
             android:layout_marginRight="20dp">
             <!--设置-->
             <Button
-                android:id="@+id/main2_btn_setup"
+                android:id="@+id/main3_btn_setup"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"

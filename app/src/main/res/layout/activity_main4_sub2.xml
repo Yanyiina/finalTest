@@ -35,7 +35,7 @@
                     android:gravity="center"
                     android:text="放松环节"
                     android:textColor="#e6ffffff"
-                    android:textSize="40dp"/>
+                    android:textSize="30dp"/>
 
             </RelativeLayout>
 

@@ -31,9 +31,9 @@
                 android:layout_height="80dp"
                 android:text="体适能评估"
                 android:gravity="center"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:background="#00000000"
-                android:textColor="#fff"/>
+                android:textColor="#e6ffffff"/>
         </RelativeLayout>
 
         <!--五个按键-->

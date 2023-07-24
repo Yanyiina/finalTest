@@ -80,7 +80,6 @@
                             android:background="@drawable/main4_arr2"
                             android:text="站位指引"
                             android:paddingTop="10dp"
-                            android:paddingRight="10dp"
                             android:textSize="8dp"
                             android:gravity="center"
                             android:textColor="#fff"
@@ -143,10 +142,11 @@
                 android:layout_height="100dp"
                 android:background="#00000000"
                 android:text="体态评估项目通过VisBodyEngine平台AI智能人体识别对您的正面及侧面图像进行分析识别，从而对头前引、高低肩、圆肩等7项关键体态信息进行评估分析。并给出详细评估报告。提示体态健康风险等级。"
-                android:textColor="#e6ffffff"
-                android:textSize="12dp"
+                android:textColor="#b3ffffff"
+                android:textSize="10dp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"
+                android:padding="5dp"
                 />
         </LinearLayout>
 
