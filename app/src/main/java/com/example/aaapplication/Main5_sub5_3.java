@@ -285,6 +285,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
                     v.setVisibility(View.INVISIBLE);
                     score.setText("得分为" + mouseCount);
                     if (mouseCount == maxMouseCount) {
+
                         stopWhackAMoleGame();
                         navigateToAnotherActivity(student);
                     }

@@ -31,6 +31,19 @@ public class Main3_function extends AppCompatActivity {
             }
         });
 
+//        设置
+        Button btn_set = (Button)findViewById(R.id.main3_btn_setup);
+        btn_set.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3_function.this,Main_set.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
 //        点击  体态评估按钮  跳转页面4
 
 

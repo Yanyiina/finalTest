@@ -31,8 +31,8 @@
                           android:layout_weight="1"
                           android:gravity="center"
                           android:text="侧面评估"
-                          android:textColor="#FFF"
-                          android:textSize="40dp"/>
+                          android:textColor="#e6fffFFF"
+                          android:textSize="30dp"/>
 
             </RelativeLayout>
 

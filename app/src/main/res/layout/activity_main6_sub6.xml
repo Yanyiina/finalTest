@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="十字象限跳    "
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#fff"
                     android:drawableRight="@drawable/main5_sub1_arr_wid"
                     android:layout_marginBottom="15dp"/>
@@ -72,8 +72,8 @@
                 <!--分割线-->
                 <View
                     android:layout_width="fill_parent"
-                    android:layout_height="2dip"
-                    android:background="#ccffffff" />
+                    android:layout_height="1dp"
+                    android:background="#85ffffff" />
             </LinearLayout>
 
             <!--注意事项-->

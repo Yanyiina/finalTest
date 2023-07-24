@@ -2,8 +2,11 @@ package com.example.aaapplication;
 
 
 
+import android.app.Dialog;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.view.MotionEvent;
 import android.widget.*;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,10 +41,96 @@ public class Main2_stu_list extends AppCompatActivity {
     private int pageSize = 10;
     private String childName;
 
+//    加载列表
+    private TextView showDialogButton;
+    private List<String> pageList;
+    private ArrayAdapter<String> adapter2;
+    private ListView listViewSmall;
+    private FrameLayout mainLayout;
+
+    private ListView listLayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_stu_list);
+
+//        加载列表
+        showDialogButton = findViewById(R.id.main2_load_page);
+        listViewSmall = findViewById(R.id.listView_small); // 获取ListView实例
+        listLayout = findViewById(R.id.main2_stu_list);
+
+        pageList = new ArrayList<>();
+        // 从数据库中获取页数数据并添加到pageList中
+        // 这里为示例直接添加数据
+        for (int i = 1; i <= 20; i++) {
+            pageList.add("第 " + i + " 页");
+        }
+
+        // 创建适配器并设置列表项数据
+        adapter2 = new ArrayAdapter<>(this, R.layout.dialog_list, pageList);
+        listViewSmall.setAdapter(adapter2);
+
+        // 获取整个布局的实例
+        mainLayout = findViewById(R.id.linear_list_page);
+
+
+        // 设置 TextView 的点击事件监听器
+        showDialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 显示或隐藏列表
+                if (listViewSmall.getVisibility() == View.VISIBLE) {
+                    hideListView();
+                } else {
+                    showListView();
+                }
+            }
+        });
+
+        // 设置根布局的点击事件监听器
+        mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 判断触摸点的位置是否在listViewSmall内
+                int[] listViewPos = new int[2];
+                listViewSmall.getLocationOnScreen(listViewPos);
+                int listViewLeft = listViewPos[0];
+                int listViewTop = listViewPos[1];
+                int listViewRight = listViewLeft + listViewSmall.getWidth();
+                int listViewBottom = listViewTop + listViewSmall.getHeight();
+
+                float x = v.getX();
+                float y = v.getY();
+
+                if (x < listViewLeft || x > listViewRight || y < listViewTop || y > listViewBottom) {
+                    // 点击的位置在listViewSmall以外，隐藏列表
+                    hideListView();
+                }
+            }
+        });
+
+        listLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listViewSmall.getVisibility() == View.VISIBLE) {
+                    hideListView();
+                }
+            }
+        });
+
+
+        // 禁止整个布局的点击事件传递给下层视图，防止点击列表时触发隐藏列表
+//        mainLayout.setClickable(true);
+
+
+
+
+
+
+
+
 
         // 加载字体文件
         Typeface iconfont = Typeface.createFromAsset(getAssets(), "main2_stu_list.ttf");
@@ -199,6 +288,20 @@ public class Main2_stu_list extends AppCompatActivity {
             }
         });
 
+
+        // 列表中  设置  按钮
+        Button btn_setup = findViewById(R.id.main2_btn_setup);
+        btn_setup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main2_stu_list.this, Main_set.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
         // 搜索框
         EditText searchEditText = findViewById(R.id.main2_search_edit);
         searchEditText.addTextChangedListener(new TextWatcher() {
@@ -222,6 +325,14 @@ public class Main2_stu_list extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
+
+
+
+
+
+
+
+//
     }
 
     private void filterList(String searchText) {
@@ -339,4 +450,33 @@ public class Main2_stu_list extends AppCompatActivity {
     }
 
 
+
+
+//    列表加载
+// 处理显示列表点击事件
+//    public void onShowListClick(View view) {
+//        if (listViewSmall.getVisibility() == View.VISIBLE) {
+//            // 如果列表已经显示，则隐藏它
+//            hideListView();
+//        } else {
+//            // 如果列表尚未显示，则显示它
+//            showListView();
+//        }
+//    }
+
+    // 隐藏列表
+    private void hideListView() {
+        listViewSmall.setVisibility(View.GONE);
+    }
+
+    // 显示列表
+    private void showListView() {
+        listViewSmall.setVisibility(View.VISIBLE);
+    }
+
+
+
+
+
+//
 }
