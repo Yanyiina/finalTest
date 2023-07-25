@@ -17,7 +17,11 @@ public class Main4_sub6 extends AppCompatActivity {
         setContentView(R.layout.activity_main4_sub6);
 
         Intent intent = getIntent();
+
         final List_stu student = (List_stu) intent.getSerializableExtra("student");
+
+        System.out.println("标记关键点" + student.getPositive_points());
+        System.out.println("标记height" + student.getPositive_height());
 
         String reportUrl = student.getReportUrl(); // 假设这是你获取到的报告URL
 

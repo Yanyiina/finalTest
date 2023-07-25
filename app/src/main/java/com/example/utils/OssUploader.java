@@ -230,8 +230,9 @@ public class OssUploader {
 
 
     //图像切割  http://127.0.0.1:8080/hardware/test/imgSegmentation?imgName=photo/20230630/photo_1688113243635_6416301527640.png
-    public static  CompletableFuture<Void>  segmentImage(String imageName, String i, String url_temp) {
-        CompletableFuture<Void> future = null;
+    // CompletableFuture<String[]>
+    public static  CompletableFuture<String[]>  segmentImage(String imageName, String i, String url_temp) {
+        CompletableFuture<String[]> future = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             future = new CompletableFuture<>();
         }
@@ -277,33 +278,26 @@ public class OssUploader {
 
                 ImageUtils.compressAndSaveImage(savePath, outputDir, outputFileName, maxWidth, maxHeight, quality);
                 System.out.println("图片保存成功，保存路径：" + savePath);
-                uploadToOSS1(savePath, url_temp);
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//                    CompletableFuture<Void> finalFuture = future;
-//                    future.thenCompose(ignored -> uploadToOSS1(savePath)).thenAccept(result -> {
-//                        System.out.println("图片上传到OSS成功！");
-//                        finalFuture.complete(null);
-//                    }).exceptionally(ex -> {
-//                        System.out.println("图片上传到OSS失败！");
-//                        finalFuture.completeExceptionally(ex);
-//                        return null;
-//                    });
-//                }
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//                    CompletableFuture<Void> finalFuture = future;
-//
-//                    uploadToOSS(savePath).thenAccept(result -> {
-//                        // 处理上传完成后的逻辑
-//                        System.out.println("图片上传到OSS成功！");
-//                        finalFuture.complete(null); // 完成 CompletableFuture
-//                    }).exceptionally(ex -> {
-//                        // 处理上传失败的情况
-//                        ex.printStackTrace();
-//                        finalFuture.completeExceptionally(ex);
-//                        return null;
-//                    });
-//                }
+                // uploadToOSS1(savePath, url_temp);
+                CompletableFuture<Void> uploadFuture = uploadToOSS1(savePath, url_temp);
 
+                // 注册回调函数，处理上传结果
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    CompletableFuture<String[]> finalFuture = future;
+                    uploadFuture.thenAccept(result -> {
+                        System.out.println("上传完成");
+                        // 在这里处理上传完成后的逻辑
+                        // 可以在这里执行需要在上传完成后执行的代码
+                        String back[] = identifyKeyPoints(url_temp);
+
+                        store_point[0] = back[0];
+                        store_point[1] = back[1];
+                        finalFuture.complete(store_point);
+                    });
+                }
+
+
+                // 再次关键点识别
             } else {
                 System.out.println("图像切割失败，错误代码：" + responseCode);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

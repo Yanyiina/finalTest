@@ -3,7 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.aaapplication">
 
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="false" />
+    <!-- 自定义相机时使用系统摄像头需要设置权限 -->
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 允许程序写入外部存储（SD卡上写文件）必有 -->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序读取外部存储（SD卡上读文件）必有 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 在sd卡内创建或删除文件权限（允许挂在和反挂载文件系统可移动存储），tools是为了解决添加该权限产生的报错问题 -->
+    <uses-permission
+            android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+            tools:ignore="ProtectedPermissions" /><!-- 网络 -->
     <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"

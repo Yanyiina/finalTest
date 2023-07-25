@@ -33,6 +33,9 @@ public class Main4_sub5 extends AppCompatActivity {
     private TextView timeText;
     private CountDownTimer countDownTimer;
 
+    // 接收返回值
+    private String[] recieveBack;
+
     private final long totalTime = 60000; // 总计时时间（毫秒）
     private final long interval = 1000; // 倒计时时间间隔（毫秒）
     private final int progressMax = 100; //
@@ -60,7 +63,25 @@ public class Main4_sub5 extends AppCompatActivity {
                 String imageUrl = student.getPositive_url();
                 String parm = "0";
                 String parm2 = student.getPositive_url();
-                OssUploader.segmentImage(imageUrl, parm, parm2);
+                CompletableFuture<String[]> segmentFuture = OssUploader.segmentImage(imageUrl, parm, parm2);
+                // 注册回调函数，处理返回的store_point数组
+                segmentFuture.thenAccept(store_point -> {
+                    // 在这里获取store_point数组的值，并进行后续处理
+                    System.out.println("store_point[0]: " + store_point[0]);
+                    System.out.println("store_point[1]: " + store_point[1]);
+                    student.setPositive_points(store_point[0]);
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    JsonNode jsonNode = null;
+                    try {
+                        jsonNode = objectMapper.readTree(store_point[1]);
+                    } catch (JsonProcessingException e) {
+                        e.printStackTrace();
+                    }
+                    // 获取"lag2"后面的值
+                    store_point[1] = jsonNode.get("height").toString();
+                    student.setPositive_height(store_point[1]);
+                });
+
             }, executorService);
         }
 
@@ -69,7 +90,25 @@ public class Main4_sub5 extends AppCompatActivity {
                 String imageUrl = student.getSide_url();
                 String parm = "1";
                 String parm2 = student.getSide_url();
-                OssUploader.segmentImage(imageUrl, parm, parm2);
+                // OssUploader.segmentImage(imageUrl, parm, parm2);
+                CompletableFuture<String[]> segmentFuture = OssUploader.segmentImage(imageUrl, parm, parm2);
+                // 注册回调函数，处理返回的store_point数组
+                segmentFuture.thenAccept(store_point1 -> {
+                    // 在这里获取store_point数组的值，并进行后续处理
+                    System.out.println("store_point[0]: " + store_point1[0]);
+                    System.out.println("store_point[1]: " + store_point1[1]);
+                    student.setSide_points(store_point1[0]);
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    JsonNode jsonNode = null;
+                    try {
+                        jsonNode = objectMapper.readTree(store_point1[1]);
+                    } catch (JsonProcessingException e) {
+                        e.printStackTrace();
+                    }
+                    // 获取"lag2"后面的值
+                    store_point1[1] = jsonNode.get("height").toString();
+                    student.setSide_height(store_point1[1]);
+                });
             }, executorService);
         }
 
@@ -455,38 +494,38 @@ public class Main4_sub5 extends AppCompatActivity {
         countDownTimer.start();
     }
 
-    private class NetworkTask extends AsyncTask<String, Void, CompletableFuture<Void>> {
-        @Override
-        protected CompletableFuture<Void> doInBackground(String... urls) {
-            String imageUrl = urls[0];
-            String parm = urls[1];
-            String parm2 = urls[2];
-            // 在后台线程中执行网络请求
-            return OssUploader.segmentImage(imageUrl, parm, parm2);
-        }
-
-        @Override
-        protected void onPostExecute(CompletableFuture<Void> result) {
-            // 在任务执行完毕后处理结果
-            if (result != null) {
-                // 处理返回的结果
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    result.thenAccept(res -> {
-                        System.out.println("执行完毕");
-                        // 在这里执行任务完成后的逻辑
-                        // 例如，可以在这里更新UI或执行其他操作
-                        // 任务1和任务2都执行完后，会执行到这里
-                    }).exceptionally(ex -> {
-                        // 处理任务失败的情况
-                        ex.printStackTrace();
-                        return null;
-                    });
-                }
-            } else {
-                // 处理请求失败的情况
-            }
-        }
-    }
+//    private class NetworkTask extends AsyncTask<String, Void, CompletableFuture<Void>> {
+//        @Override
+//        protected CompletableFuture<Void> doInBackground(String... urls) {
+//            String imageUrl = urls[0];
+//            String parm = urls[1];
+//            String parm2 = urls[2];
+//            // 在后台线程中执行网络请求
+//            return OssUploader.segmentImage(imageUrl, parm, parm2);
+//        }
+//
+//        @Override
+//        protected void onPostExecute(CompletableFuture<Void> result) {
+//            // 在任务执行完毕后处理结果
+//            if (result != null) {
+//                // 处理返回的结果
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                    result.thenAccept(res -> {
+//                        System.out.println("执行完毕");
+//                        // 在这里执行任务完成后的逻辑
+//                        // 例如，可以在这里更新UI或执行其他操作
+//                        // 任务1和任务2都执行完后，会执行到这里
+//                    }).exceptionally(ex -> {
+//                        // 处理任务失败的情况
+//                        ex.printStackTrace();
+//                        return null;
+//                    });
+//                }
+//            } else {
+//                // 处理请求失败的情况
+//            }
+//        }
+//    }
 
     @Override
     protected void onDestroy() {
