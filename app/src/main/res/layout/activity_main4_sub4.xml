@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical"
-                  android:background="@color/main3_background">
+                  android:background="@color/main_background">
 
         <!-- 第一块 -->
         <LinearLayout
@@ -40,7 +40,8 @@
         <SurfaceView
                 android:id="@+id/surfaceView1"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"/>
+                android:layout_height="1dp"
+                />
 
         <!-- 第二块 -->
         <LinearLayout
@@ -131,6 +132,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/main4_sub4_scan_wid"/>
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gv_error"
+                    android:layout_width="180dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/side"/>
 
 
             </RelativeLayout>

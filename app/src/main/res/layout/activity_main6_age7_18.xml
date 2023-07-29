@@ -71,7 +71,7 @@
                         android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
-                        android:drawableLeft="@drawable/main6_tu1_wid"/>
+                        android:drawableLeft="@drawable/bmi_logo_wid"/>
 
                     <!--历史记录与日期-->
                     <RelativeLayout

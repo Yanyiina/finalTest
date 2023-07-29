@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main5_sub1_2"
-    android:background="@color/main_background">
+    android:background="@color/video">
 
     <!--界面3，计时控制-->
     <RelativeLayout

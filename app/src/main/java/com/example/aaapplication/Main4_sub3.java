@@ -1,6 +1,7 @@
 package com.example.aaapplication;
 
 import android.content.Intent;
+import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.CountDownTimer;
@@ -64,6 +65,9 @@ public class Main4_sub3 extends AppCompatActivity implements SurfaceHolder.Callb
         //
         mSurfaceView = findViewById(R.id.surfaceView);
         mSurfaceHolder = mSurfaceView.getHolder();
+
+        mSurfaceHolder.setFormat(PixelFormat.TRANSPARENT); // 设置透明背景
+
         mSurfaceHolder.addCallback(this);
         takePhotoWithDelay(5);
 

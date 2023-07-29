@@ -35,7 +35,7 @@
                 android:layout_weight="6"
                 android:gravity="center">
 
-                <pl.droidsonroids.gif.GifImageView
+                <ImageView
                     android:id="@+id/gv_error"
                     android:layout_width="280dp"
                     android:layout_height="250dp"

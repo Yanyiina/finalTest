@@ -2,6 +2,7 @@ package com.example.aaapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.os.*;
 import android.util.Log;
@@ -57,6 +58,7 @@ public class main4_sub4 extends AppCompatActivity implements SurfaceHolder.Callb
         //
         mSurfaceView = findViewById(R.id.surfaceView1);
         mSurfaceHolder = mSurfaceView.getHolder();
+        mSurfaceHolder.setFormat(PixelFormat.TRANSPARENT); // 设置透明背景
         mSurfaceHolder.addCallback(this);
 
         //

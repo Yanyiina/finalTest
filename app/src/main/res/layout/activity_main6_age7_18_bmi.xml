@@ -36,7 +36,7 @@
                 android:layout_weight="6"
                 android:gravity="center">
 
-                <pl.droidsonroids.gif.GifImageView
+                <ImageView
                     android:id="@+id/gv_error"
                     android:layout_width="280dp"
                     android:layout_height="250dp"
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="身体形态    "
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#fff"
                     android:drawableRight="@drawable/main5_sub1_arr_wid"
                     android:layout_marginBottom="15dp"/>

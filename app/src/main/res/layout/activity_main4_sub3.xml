@@ -44,12 +44,13 @@
             android:layout_gravity="center"
             >
 
-
-            <SurfaceView
-                    android:id="@+id/surfaceView"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"/>
         </LinearLayout>
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
 
         <RelativeLayout
             android:layout_width="fill_parent"

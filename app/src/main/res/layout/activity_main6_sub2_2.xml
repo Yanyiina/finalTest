@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Main6_sub2_2"
     android:orientation="vertical"
-    android:background="@color/main_background">
+    android:background="@color/video">
 
     <!--界面3，计时控制-->
     <RelativeLayout

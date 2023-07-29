@@ -56,7 +56,7 @@
                         android:layout_centerVertical="true"
                         android:layout_width="56dp"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/weight" />
+                        android:drawableLeft="@drawable/high_logo_wid" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
                         android:layout_centerVertical="true"
                         android:layout_width="56dp"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/weight" />
+                        android:drawableLeft="@drawable/weight_logo_wid" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"

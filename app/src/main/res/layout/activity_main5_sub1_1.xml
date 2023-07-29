@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Main5_sub1_1"
-    android:background="@color/main_background">
+    android:background="@color/video">
 
     <RelativeLayout
         android:layout_width="fill_parent"
