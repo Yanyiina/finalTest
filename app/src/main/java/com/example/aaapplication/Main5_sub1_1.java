@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+//左脚站立
+
 public class Main5_sub1_1 extends AppCompatActivity {
     private VideoView videoView;
     private Button btn_start;

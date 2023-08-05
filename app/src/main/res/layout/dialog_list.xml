@@ -4,9 +4,9 @@
     android:id="@android:id/text1"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:textSize="16sp"
+    android:textSize="20dp"
     android:gravity="center"
-    android:padding="10dp"
+    android:padding="12dp"
     android:textColor="#FFFFFF"
     android:background="@drawable/color_list_page"
 />

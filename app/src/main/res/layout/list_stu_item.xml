@@ -12,17 +12,17 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="180dp"
         android:layout_weight="6"
         android:orientation="vertical"
         android:gravity="center_vertical"
-        android:paddingLeft="10dp"
+        android:paddingLeft="40dp"
         >
         <TextView
             android:id="@+id/stu_name"
             android:layout_gravity="center_vertical"
-            android:textSize="18dp"
-            android:textColor="#fff"
+            android:textSize="40dp"
+            android:textColor="@color/three"
             android:text="name"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
@@ -33,49 +33,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="10dp"
             android:text="course"
-            android:textColor="#fff"
-            android:textSize="10dp" />
+            android:textColor="@color/four"
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="12dp">
             <TextView
                 android:id="@+id/stu_sex"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:background="@drawable/color_list_stu"
-                android:textColor="#fff"
+                android:textColor="@color/four"
                 android:text="sex"
-                android:textSize="10sp"
+                android:textSize="15dp"
                 android:layout_marginLeft="10dp"
-                android:layout_width="30dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/stu_age"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:background="@drawable/color_list_stu"
-                android:textColor="#fff"
+                android:textColor="@color/four"
                 android:text="age"
-                android:textSize="10sp"
-                android:layout_marginLeft="5dp"
-                android:layout_width="36dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/stu_num"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:background="@drawable/color_list_stu"
-                android:textColor="#fff"
+                android:textColor="@color/four"
                 android:text="num"
-                android:textSize="10sp"
-                android:layout_marginLeft="5dp"
-                android:layout_width="85dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -84,36 +84,38 @@
 
 
     <!--按钮界面-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="bottom"
-        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="40dp"
         android:paddingBottom="10dp"
         >
 
         <Button
             android:id="@+id/stu_go"
             android:layout_gravity="center_vertical"
-            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:textColor="@color/four"
             android:text="去测试"
-            android:textSize="10sp"
+            android:textSize="30dp"
             android:background="@drawable/color_goto"
-            android:drawableRight="@drawable/main3_back_wid"
-            android:layout_width="70dp"
-            android:layout_height="30dp"
-            android:padding="8dp"
+            android:drawableRight="@drawable/name_arr_wid"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:padding="15dp"
             />
         <TextView
-            android:layout_width="70dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/stu_go"
             android:gravity="center"
-            android:textColor="#99ffffff"
+            android:textColor="@color/four"
             android:text=""
-            android:textSize="10sp"/>
+            android:textSize="15dp"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 

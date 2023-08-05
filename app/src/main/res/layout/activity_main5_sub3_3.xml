@@ -24,7 +24,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
-                android:padding="15dp">
+                android:padding="30dp">
 
                 <!--标题栏-->
                 <RelativeLayout
@@ -40,7 +40,7 @@
                         android:layout_height="wrap_content"
                         android:text="垂直纵跳"
                         android:gravity="center"
-                        android:textSize="30dp"
+                        android:textSize="60dp"
                         android:background="#00000000"
                         android:textColor="#fff"/>
                 </RelativeLayout>
@@ -57,21 +57,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5"
-                        android:textColor="#fff"
-                        android:textSize="80sp"/>
+                        android:textColor="@color/one"
+                        android:textSize="160dp"
+                        android:textStyle="bold"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="秒"
                         android:layout_marginTop="-8dp"
-                        android:textColor="#fff"
-                        android:textSize="20sp"/>
+                        android:textColor="@color/three"
+                        android:textSize="50dp"/>
                     <TextView
                         android:id="@+id/main5_sub1_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-70dp"
-                        android:layout_marginBottom="50dp"
+                        android:layout_width="1000dp"
+                        android:layout_height="370dp"
+                        android:layout_marginTop="-180dp"
+                        android:layout_marginBottom="150dp"
                         android:background="@drawable/main5_sub1_3" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -85,7 +86,7 @@
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     android:gravity="bottom"
                     android:paddingTop="10dp"
                     >
@@ -100,21 +101,21 @@
                             android:id="@+id/main5_sub3_3_back"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="30dp"
                             android:layout_weight="1"
                             android:background="@drawable/btn_back"
                             android:drawableTop="@drawable/main4_back_wid"
                             android:padding="5dp"
                             android:text="返回"
-                            android:textColor="#fff"
-                            android:textSize="5dp" />
+                            android:textColor="@color/one"
+                            android:textSize="30dp" />
                         <!--下一个项目-->
                         <LinearLayout
                             android:id="@+id/main5_sub3_3_start"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="6"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="30dp"
                             android:background="@drawable/btn_gradient"
                             android:orientation="vertical"
                             android:gravity="center">
@@ -122,14 +123,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="下一个项目"
-                                android:textSize="15dp"
-                                android:textColor="#fff"/>
+                                android:textSize="30dp"
+                                android:textColor="@color/one"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="原地开合跳"
-                                android:textSize="10dp"
-                                android:textColor="#fff"/>
+                                android:textSize="20dp"
+                                android:textColor="@color/one"/>
                         </LinearLayout>
 
                         <!--查看报告-->
@@ -138,12 +139,12 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="3"
-                            android:paddingLeft="15dp"
+                            android:paddingLeft="35dp"
                             android:background="@drawable/btn_back"
                             android:textSize="10dp"
                             android:text="查看报告"
                             android:drawableLeft="@drawable/main5_sub1_3_check_wid"
-                            android:textColor="#fff"/>
+                            android:textColor="@color/one"/>
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -160,19 +161,25 @@
         <!--结束测试-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
             >
+            <View
+                android:id="@+id/view"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_centerVertical="true"/>
             <TextView
                 android:id="@+id/main5_sub3_3_exist"
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:paddingTop="4dp"
+                android:layout_width="160dp"
+                android:layout_height="100dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
                 android:gravity="center"
                 android:background="@drawable/btn_main5_sub_over"
                 android:text="重测本项"
-                android:textColor="#fff"
-                android:textSize="8dp"
+                android:textColor="#99ffffff"
+                android:layout_below="@+id/view"
+                android:textSize="20dp"
                 android:drawableTop="@drawable/circle_back_wid"/>
         </RelativeLayout>
 

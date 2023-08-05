@@ -14,20 +14,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/color_background"
-            android:alpha="0.2" />
+            android:alpha="0.1" />
 
         <!--设置-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp">
             <!--设置-->
             <Button
                 android:id="@+id/main3_btn_setup"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:background="@drawable/set_up"/>
@@ -41,7 +41,7 @@
             android:orientation="vertical"
             android:layout_gravity="center"
             android:gravity="center_vertical"
-            android:layout_margin="15dp">
+            android:layout_margin="30dp">
 
 
 
@@ -71,31 +71,35 @@
                     <!--头像-->
                     <ImageView
                         android:id="@+id/main3_picture"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:padding="6dp"
+                        android:layout_width="90dp"
+                        android:layout_height="80dp"
+                        android:padding="10dp"
                         android:src="@drawable/main3_girl_wid"/>
                     <!--姓名按钮-->
                     <TextView
                         android:id="@+id/main3_name"
-                        android:layout_width="90dp"
-                        android:layout_height="40dp"
+                        android:layout_width="180dp"
+                        android:layout_height="80dp"
+                        android:gravity="center_vertical"
                         android:text="闫一一"
-                        android:padding="10dp"
-                        android:textColor="#fff"
+                        android:padding="15dp"
+                        android:textColor="@color/three"
+                        android:textSize="30dp"
                         android:drawableRight="@drawable/main3_back_wid"/>
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/main3_btn_back"
-                    android:layout_width="80dp"
+                    android:layout_width="180dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="50dp"
                     android:background="@drawable/color_main3_back"
                     android:drawableRight="@drawable/main3_back_wid"
-                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="返回"
-                    android:textColor="#CCFFFFFF" />
+                    android:textColor="@color/four"
+                    android:textSize="26dp"/>
 
             </LinearLayout>
 
@@ -104,11 +108,11 @@
             <!--体态选择-->
             <LinearLayout
                 android:id="@+id/btn_pose"
-                android:layout_width="fill_parent"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="30dp"
                 android:padding="10dp"
                 android:background="@drawable/color_btn">
                 <LinearLayout
@@ -139,7 +143,7 @@
                     android:id="@+id/btn_pose1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_weight="6"
                     android:gravity="center"
                     >
                     <!--按钮中间-->
@@ -153,12 +157,12 @@
                         <TextView
                             android:id="@+id/main3_btn_pose"
                             android:layout_width="fill_parent"
-                            android:layout_height="60dp"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
+                            android:layout_height="220dp"
+                            android:paddingLeft="60dp"
+                            android:paddingRight="60dp"
                             android:text="    体态评估"
-                            android:textColor="#fff"
-                            android:textSize="16dp"
+                            android:textColor="@color/three"
+                            android:textSize="60dp"
                             android:gravity="center_vertical"
                             android:drawableLeft="@drawable/main3_pose_wid"
                             android:drawableRight="@drawable/main3_arr_wid"
@@ -199,7 +203,7 @@
             <LinearLayout
                 android:id="@+id/btn_fit"
                 android:layout_width="fill_parent"
-                android:layout_height="100dp"
+                android:layout_height="260dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:padding="10dp"
@@ -231,7 +235,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_weight="6"
                     android:gravity="center"
                     >
                     <!--按钮中间-->
@@ -246,13 +250,13 @@
                         <TextView
                             android:id="@+id/button2"
                             android:layout_width="fill_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="220dp"
                             android:text="    体适能评估"
-                            android:paddingLeft="20dp"
-                            android:paddingRight="20dp"
+                            android:paddingLeft="60dp"
+                            android:paddingRight="60dp"
                             android:gravity="center_vertical"
-                            android:textColor="#fff"
-                            android:textSize="16dp"
+                            android:textColor="@color/three"
+                            android:textSize="60dp"
                             android:drawableLeft="@drawable/main3_fit_wid"
                             android:drawableRight="@drawable/main3_arr_wid"
                             />

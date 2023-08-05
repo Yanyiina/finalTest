@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/main3_btn_back"
-        android:width="15dp"
-        android:height="15dp"
+        android:width="40dp"
+        android:height="40dp"
         />
 </layer-list>

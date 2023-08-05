@@ -13,193 +13,217 @@
         android:layout_gravity="center_vertical"
         android:orientation="vertical">
 
-        <!--标题栏-->
+        <!--显示页面-->
         <RelativeLayout
+            android:id="@+id/main5_behind"
             android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:gravity="top"
+            android:layout_height="fill_parent"
             >
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                android:text="填写身高、体重"
-                android:gravity="center"
-                android:textSize="25sp"
-                android:background="#00000000"
-                android:textColor="#e6ffffff"/>
-        </RelativeLayout>
-
-
-
-        <!--身高体重-->
-        <RelativeLayout
-            android:id="@+id/main5_front"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            <!--选择身高体重-->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:orientation="vertical"
-                android:gravity="center"
-                >
-                <!--身高-->
+                android:padding="30dp">
+
+                <!--标题栏-->
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/color_high_weight"
-                    android:paddingLeft="30dp"
-                    android:layout_marginBottom="20dp">
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_vertical"
+                    >
                     <TextView
-                        android:layout_centerVertical="true"
-                        android:layout_width="56dp"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/high_logo_wid" />
-
-                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        android:text="填写身高、体重"
                         android:gravity="center"
-                        android:paddingTop="10dp">
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-                            <EditText
-                                    android:id="@+id/main_high_height"
-                                android:layout_width="65dp"
-                                android:layout_height="wrap_content"
-                                android:textColor="#fff"
-                                android:background="@drawable/edittext_bottom"
-                                android:padding="8dp"
-                                android:inputType="number|numberDecimal"
-                                android:digits="0123456789."
-                                android:maxLength="6"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:gravity="center"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text=" cm"
-
-                                android:textColor="#fff"
-                                android:textSize="18sp"/>
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_gravity="left"
-                            android:text="身高"
-                            android:textColor="#fff"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
-
-
-
-
-
-
-
+                        android:textSize="60dp"
+                        android:background="#00000000"
+                        android:textColor="#fff"/>
                 </RelativeLayout>
 
-                <!--体重-->
-                <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/color_high_weight"
-                    android:paddingLeft="30dp">
-                    <TextView
-                        android:layout_centerVertical="true"
-                        android:layout_width="56dp"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/weight_logo_wid" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:orientation="vertical"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:paddingTop="10dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <EditText
-                                android:id="@+id/main_high_weight"
-                                android:layout_width="65dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/edittext_bottom"
-                                android:textColor="#fff"
-                                android:gravity="center"
-                                android:inputType="number|numberDecimal"
-                                android:digits="0123456789."
-                                android:maxLength="5"
-                                />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text=" kg"
-                                android:textColor="#fff"
-                                android:textSize="18sp" />
-
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_gravity="left"
-                            android:text="体重"
-                            android:textColor="#fff"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
-
-
-
-
-
-
-
-                </RelativeLayout>
-
-
-
-                <!--跳过按钮-->
+                <!--中间栏-->
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="18"
                     android:gravity="center"
-                    android:layout_marginTop="50dp">
-                    <Button
-                        android:id="@+id/main_high_next"
-                        android:layout_width="150dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/color_main_bmi_no"
-                        android:text="下一步"
-                        android:textColor="#fff"/>
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+                    <!--身高体重-->
+                    <RelativeLayout
+                        android:id="@+id/main5_front"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <!--选择身高体重-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <!--身高-->
+                            <RelativeLayout
+                                android:layout_width="900dp"
+                                android:layout_height="350dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/color_high_weight"
+                                android:paddingLeft="60dp"
+                                android:layout_marginBottom="30dp">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/high_logo_wid" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    >
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="30dp">
+                                        <EditText
+                                            android:id="@+id/main_high_height"
+                                            android:layout_width="190dp"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#fff"
+                                            android:textSize="60dp"
+                                            android:background="@drawable/edittext_bottom"
+                                            android:padding="8dp"
+                                            android:inputType="number|numberDecimal"
+                                            android:digits="0123456789."
+                                            android:clickable="true"
+                                            android:focusable="true"
+                                            android:gravity="center"
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom"
+                                            android:text=" cm"
+                                            android:textColor="#fff"
+                                            android:textSize="50dp"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="身高"
+                                        android:textColor="#fff"
+                                        android:textSize="50dp" />
+
+                                </LinearLayout>
+
+
+
+
+                            </RelativeLayout>
+
+                            <!--体重-->
+                            <RelativeLayout
+                                android:layout_width="900dp"
+                                android:layout_height="350dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/color_high_weight"
+                                android:paddingLeft="60dp">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/weight_logo_wid" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="30dp">
+
+                                        <EditText
+                                            android:id="@+id/main_high_weight"
+                                            android:layout_width="190dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/edittext_bottom"
+                                            android:textColor="#fff"
+                                            android:inputType="number|numberDecimal"
+                                            android:digits="0123456789."
+                                            android:maxLength="5"
+                                            android:clickable="true"
+                                            android:focusable="true"
+                                            android:gravity="center"
+                                            android:textSize="60dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text=" kg"
+                                            android:textColor="#fff"
+                                            android:textSize="50dp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="体重"
+                                        android:textColor="#fff"
+                                        android:textSize="50dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <!--跳过按钮-->
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="120dp">
+                                <Button
+                                    android:id="@+id/main_high_next"
+                                    android:layout_width="300dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/color_main_bmi_no"
+                                    android:text="下一步"
+                                    android:textColor="#fff"
+                                    android:textSize="30dp"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+
                 </LinearLayout>
 
+
+
+
             </LinearLayout>
-
         </RelativeLayout>
-
 
 
 
@@ -207,22 +231,27 @@
         <!--结束测试-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
             >
+            <View
+                android:id="@+id/view"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_centerVertical="true"/>
             <TextView
                 android:id="@+id/main_high_exist"
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:paddingTop="4dp"
+                android:layout_width="160dp"
+                android:layout_height="100dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
                 android:gravity="center"
                 android:background="@drawable/btn_main5_sub_over"
                 android:text="结束测试"
-                android:textColor="#fff"
-                android:textSize="8dp"
+                android:textColor="#99ffffff"
+                android:layout_below="@+id/view"
+                android:textSize="20dp"
                 android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
         </RelativeLayout>
-
 
 
 

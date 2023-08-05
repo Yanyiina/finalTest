@@ -13,20 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/color_background"
-        android:alpha="0.2" />
+        android:alpha="0.1" />
 
 
     <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:padding="15dp"
+    android:padding="30dp"
     >
     <!--标题栏-->
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="top"
         >
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="80dp"
             android:text="体态评估"
             android:gravity="center"
-            android:textSize="30dp"
+            android:textSize="60dp"
             android:background="#00000000"
             android:textColor="#fff"/>
     </RelativeLayout>
@@ -43,7 +43,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_weight="16"
         android:gravity="center_vertical"
         android:layout_gravity="center_horizontal">
         <LinearLayout
@@ -56,7 +56,7 @@
             <!--图标-->
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="60dp"
+                android:layout_height="220dp"
                 >
                 <TextView
                     android:id="@+id/view6"
@@ -65,9 +65,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/main4_arr"
                     android:text="身高体重"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:textSize="8dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:textSize="30dp"
                     android:gravity="center"
                     android:textColor="#fff"
                     android:drawableTop="@drawable/main4_view1_wid"
@@ -79,8 +79,8 @@
                             android:layout_weight="1"
                             android:background="@drawable/main4_arr2"
                             android:text="站位指引"
-                            android:paddingTop="10dp"
-                            android:textSize="8dp"
+                            android:paddingTop="30dp"
+                            android:textSize="30dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view1_wid"
@@ -92,8 +92,8 @@
                             android:layout_weight="1"
                             android:background="@drawable/main4_arr2"
                             android:text="放松环节"
-                            android:paddingTop="10dp"
-                            android:textSize="8dp"
+                            android:paddingTop="30dp"
+                            android:textSize="30dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view2_wid"/>
@@ -104,8 +104,8 @@
                             android:layout_weight="1"
                             android:background="@drawable/main4_arr2"
                             android:text="正面评估"
-                            android:paddingTop="10dp"
-                            android:textSize="8dp"
+                            android:paddingTop="30dp"
+                            android:textSize="30dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view3_wid"/>
@@ -116,8 +116,8 @@
                             android:layout_weight="1"
                             android:background="@drawable/main4_arr2"
                             android:text="侧面评估"
-                            android:paddingTop="10dp"
-                            android:textSize="8dp"
+                            android:paddingTop="30dp"
+                            android:textSize="30dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view4_wid"/>
@@ -128,8 +128,8 @@
                             android:layout_weight="1"
                             android:background="@drawable/main4_arr2"
                             android:text="生成报告"
-                            android:paddingTop="12dp"
-                            android:textSize="8dp"
+                            android:paddingTop="56dp"
+                            android:textSize="30dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view5_wid"/>
@@ -143,7 +143,7 @@
                 android:background="#00000000"
                 android:text="体态评估项目通过VisBodyEngine平台AI智能人体识别对您的正面及侧面图像进行分析识别，从而对头前引、高低肩、圆肩等7项关键体态信息进行评估分析。并给出详细评估报告。提示体态健康风险等级。"
                 android:textColor="#b3ffffff"
-                android:textSize="10dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"
                 android:padding="5dp"
@@ -176,10 +176,10 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_back"
                 android:drawableTop="@drawable/main4_back_wid"
-                android:padding="5dp"
+                android:paddingTop="8dp"
                 android:text="返回"
                 android:textColor="#fff"
-                android:textSize="5dp" />
+                android:textSize="30dp" />
             <!--非学员按钮-->
             <Button
                 android:id="@+id/main4_start"
@@ -189,6 +189,7 @@
                 android:layout_toRightOf="@id/main4_btn_back"
                 android:background="@drawable/btn_gradient"
                 android:text="开始评估"
+                android:textSize="30dp"
                 android:textColor="#fff"/>
         </LinearLayout>
     </RelativeLayout>

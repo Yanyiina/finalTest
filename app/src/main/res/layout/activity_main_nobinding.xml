@@ -11,31 +11,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/color_background"
-        android:alpha="0.2" />
+        android:alpha="0.1" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:paddingTop="100dp">
+        android:gravity="center"
+        >
 
         <!--上半部分-->
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="600dp"
-            android:orientation="vertical"
-            android:gravity="top"
-            android:layout_gravity="center_vertical">
+            android:layout_width="1500dp"
+            android:layout_height="1500dp"
+            android:layout_gravity="center">
 
 
             <ImageView
                 android:id="@+id/binging"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_above="@+id/bind_TextView"
-                android:src="@drawable/nobinging"/>
+                android:src="@drawable/nobinging"
+                android:layout_marginBottom="150dp"/>
 
             <TextView
                 android:id="@+id/bind_TextView"
@@ -44,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="体测仪还未绑定场馆，请联系睿莱客服绑定～"
-                android:textSize="18sp"
+                android:textSize="44dp"
                 android:textColor="#fff"/>
 
 
@@ -58,21 +56,28 @@
     <!--结束测试-->
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_height="match_parent"
         >
+        <View
+            android:id="@+id/view"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            android:layout_centerVertical="true"/>
         <TextView
             android:id="@+id/main6_sub6_3_exist"
-            android:layout_width="60dp"
-            android:layout_height="35dp"
-            android:paddingTop="4dp"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
             android:gravity="center"
             android:background="@drawable/btn_main5_sub_over"
-            android:text="结束测试"
-            android:textColor="#fff"
-            android:textSize="8dp"
+            android:text="退出"
+            android:textColor="#99ffffff"
+            android:layout_below="@+id/view"
+            android:textSize="20dp"
             android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
     </RelativeLayout>
+
 
 
 </RelativeLayout>

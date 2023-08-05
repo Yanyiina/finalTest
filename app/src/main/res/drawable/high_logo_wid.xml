@@ -2,6 +2,6 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/high_logo"
-        android:width="50dp"
-        android:height="50dp"/>
+        android:width="200dp"
+        android:height="200dp"/>
 </layer-list>

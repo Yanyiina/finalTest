@@ -1,5 +1,7 @@
 package com.example.aaapplication;
 
+//左腿
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -150,7 +152,7 @@ public class Main6_sub2_2 extends AppCompatActivity {
 
     //倒计时结束时跳转页面
     private void navigateToAnotherActivity(List_stu student) {
-        Intent intent = new Intent(Main6_sub2_2.this, Main6_sub2_3.class);
+        Intent intent = new Intent(Main6_sub2_2.this, Main6_sub2_1_2.class);
         intent.putExtra("student", student);
         startActivity(intent);
         finish(); // 结束当前页面

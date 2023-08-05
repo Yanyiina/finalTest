@@ -15,93 +15,99 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_margin="10dp"
+        android:padding="30dp"
         >
         <!--标题栏-->
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="horizontal"
             android:gravity="top"
             >
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="9"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="学员列表"
                 android:textColor="#fff"
-                android:textSize="26dp" />
+                android:textSize="60dp" />
             <RelativeLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center">
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                >
                 <!--设置-->
                 <Button
                     android:id="@+id/main2_btn_setup"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/set_up"/>
             </RelativeLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <!--搜索栏-->
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:padding="5dp"
-            android:layout_marginTop="10dp"
             android:gravity="center_vertical"
             >
-            <EditText
-                android:id="@+id/main2_search_edit"
-                android:layout_width="0dp"
-                android:layout_height="80px"
-                android:layout_weight="8"
-                android:drawableLeft="@drawable/main2_search_left_wid"
-                android:background="@drawable/main2_stu_search"
-                android:hint="搜索"
-                android:paddingLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:textColorHint="#b7b7b7"
-                android:textStyle="bold"
-                android:textColor="#e6ffffff"
-                android:textSize="12sp"
-                android:drawablePadding="15dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="100dp"
+                android:paddingBottom="20dp"
+                android:layout_centerVertical="true"
+                >
+                <EditText
+                    android:id="@+id/main2_search_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:drawableLeft="@drawable/main2_search_left_wid"
+                    android:background="@drawable/main2_stu_search"
+                    android:hint="   搜索"
+                    android:paddingLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    android:textColorHint="#b7b7b7"
+                    android:textStyle="bold"
+                    android:textColor="#e6ffffff"
+                    android:textSize="30dp"
+                    android:drawablePadding="20dp"/>
+            </RelativeLayout>
+
             <!--加号-->
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:paddingBottom="20dp"
+                android:layout_centerVertical="true"
+                >
                 <Button
                     android:id="@+id/main2_btn_add"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/btn_gradient_add"
                     android:text="@string/main2_add"
                     android:textColor="#fff"
-                    android:textSize="26dp" />
+                    android:textSize="40dp" />
             </RelativeLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <!--信息栏  先用json文件读取信息放入列表-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
+            android:layout_weight="15"
             android:orientation="vertical"
             android:paddingTop="10dp"
             >
@@ -111,9 +117,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:divider="@color/main_background"
-                android:dividerHeight="10dp"
+                android:dividerHeight="20dp"
                 android:scrollbars="none"
-                android:layout_marginBottom="45dp"
+                android:layout_marginBottom="120dp"
                 android:clickable="true"/>
 
 
@@ -132,11 +138,11 @@
                     android:layout_alignParentRight="true">
                     <TextView
                         android:id="@+id/main2_btn_go_lastPage"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:background="@drawable/color_main_press"
                         android:layout_marginRight="15dp"
-                        android:paddingRight="10dp"
+                        android:paddingRight="30dp"
                         android:drawableRight="@drawable/arr_left_wid"/>
 
                     <LinearLayout
@@ -145,17 +151,16 @@
                         android:orientation="vertical">
 
 
-
                         <TextView
                             android:id="@+id/main2_load_page"
-                            android:layout_width="70dp"
-                            android:layout_height="36dp"
+                            android:layout_width="160dp"
+                            android:layout_height="100dp"
                             android:layout_marginRight="15dp"
                             android:gravity="center"
                             android:background="@drawable/color_main_press2"
                             android:text="4/100"
                             android:textColor="#fff"
-                            android:textSize="16sp"
+                            android:textSize="30dp"
                             android:clickable="true"
                             />
 
@@ -164,11 +169,11 @@
 
                     <TextView
                         android:id="@+id/main2_btn_go_nextPage"
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:background="@drawable/color_main_press"
-                        android:paddingRight="10dp"
-                        android:drawableRight="@drawable/main3_back_wid"
+                        android:paddingRight="30dp"
+                        android:drawableRight="@drawable/name_arr_wid"
                         />
 
 
@@ -176,7 +181,7 @@
             </RelativeLayout>
             <!--列表项-->
             <RelativeLayout
-                android:layout_width="160dp"
+                android:layout_width="400dp"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
                 android:layout_alignParentRight="true"
@@ -185,11 +190,12 @@
                 <!-- 列表项 -->
                 <ListView
                     android:id="@+id/listView_small"
-                    android:layout_width="150dp"
-                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="260dp"
+                    android:layout_height="500dp"
                     android:divider="@android:color/transparent"
                     android:dividerHeight="0dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="110dp"
                     android:visibility="gone"
                     android:scrollbars="none"
                     />
@@ -233,7 +239,7 @@
                     android:padding="5dp"
                     android:text="退出"
                     android:textColor="#fff"
-                    android:textSize="8dp" />
+                    android:textSize="30dp" />
                 <!--非学员按钮-->
                 <Button
                     android:id="@+id/main2_btn_not_stu"
@@ -243,7 +249,7 @@
                     android:layout_toRightOf="@id/main2_btn_go_out"
                     android:background="@drawable/btn_gradient"
                     android:text="非学员列表"
-
+                    android:textSize="30dp"
                     android:textColor="#fff"/>
             </LinearLayout>
         </RelativeLayout>

@@ -6,7 +6,7 @@
 
     <color name="background">#101010</color>
 
-    <color name="back_go">#e24561</color>
+    <color name="back_go">#b3e24561</color>
     <color name="button_select">#b34168</color>
 
     <!--min3-->
@@ -23,6 +23,11 @@
     <!--正式-->
     <color name="back">#FFDE3151</color>
     <color name="video">#010101</color>
+
+    <color name="three">#b3ffffff</color>
+    <color name="four">#99ffffff</color>
+    <color name="one">#e6ffffff</color>
+    <color name="zero">#ffffff</color>
 
 
 

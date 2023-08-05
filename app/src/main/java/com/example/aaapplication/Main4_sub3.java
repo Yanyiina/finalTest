@@ -160,7 +160,7 @@ public class Main4_sub3 extends AppCompatActivity implements SurfaceHolder.Callb
     private Camera getCamera(){
         Camera camera;
         try {
-            camera=Camera.open(0);//获取camera对象
+            camera=Camera.open();//获取camera对象
         }catch (Exception e){
             camera=null;//发生异常将camera=null
         }

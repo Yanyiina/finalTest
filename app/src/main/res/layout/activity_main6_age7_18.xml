@@ -12,18 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/color_background"
-        android:alpha="0.2" />
+        android:alpha="0.1" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="30dp">
         <!--标题栏-->
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="top"
             >
             <TextView
@@ -31,7 +31,7 @@
                 android:layout_height="80dp"
                 android:text="体适能评估"
                 android:gravity="center"
-                android:textSize="30dp"
+                android:textSize="60dp"
                 android:background="#00000000"
                 android:textColor="#fff"/>
         </RelativeLayout>
@@ -40,7 +40,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_weight="16"
             android:orientation="vertical"
             android:gravity="center_vertical"
             android:layout_gravity="center_horizontal">
@@ -48,29 +48,29 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
+                    android:paddingLeft="20dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn7"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="身体形态"
+                        android:layout_height="wrap_content"
+                        android:text="      身体形态"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
                         android:paddingLeft="20dp"
-                        android:paddingRight="50dp"
                         android:drawableLeft="@drawable/bmi_logo_wid"/>
 
                     <!--历史记录与日期-->
@@ -104,21 +104,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="right"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:background="@drawable/color_small_btn"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn1"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-
-                        android:text="一分钟仰卧起坐"
+                        android:layout_height="wrap_content"
+                        android:text="      一分钟仰卧起坐"
                         android:textColor="#fff"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:textSize="12dp"
-                        android:paddingLeft="20dp"
+                        android:textSize="50dp"
+                        android:paddingLeft="40dp"
                         android:paddingRight="20dp"
                         android:drawableLeft="@drawable/main6_tu1_wid"/>
 
@@ -156,28 +156,28 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn2"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="单腿站立"
+                        android:layout_height="wrap_content"
+                        android:text="      单腿站立"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="40dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu2_wid"/>
 
@@ -212,20 +212,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="right"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn3"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="垂直纵跳"
+                        android:layout_height="wrap_content"
+                        android:text="       垂直纵跳"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="30dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu3_wid"/>
 
@@ -263,28 +264,28 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn4"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="30秒连续跳"
+                        android:layout_height="wrap_content"
+                        android:text="      30秒连续跳"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="40dp"
                         android:paddingRight="30dp"
                         android:drawableLeft="@drawable/main6_tu4_wid"/>
 
@@ -319,20 +320,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="right"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn5"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="俯卧撑"
+                        android:layout_height="wrap_content"
+                        android:text="      俯卧撑"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="40dp"
                         android:paddingRight="60dp"
                         android:drawableLeft="@drawable/main6_tu5_wid"/>
 
@@ -371,28 +373,28 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main6_btn6"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="十字象限跳"
+                        android:layout_height="wrap_content"
+                        android:text="      十字象限跳"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="40dp"
                         android:paddingRight="30dp"
                         android:drawableLeft="@drawable/main6_tu6_wid"/>
 
@@ -427,8 +429,9 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
-                    android:gravity="right">
+                    android:gravity="center_vertical">
                     <View
                         android:layout_width="fill_parent"
                         android:layout_height="60dp" />
@@ -466,7 +469,7 @@
                     android:padding="5dp"
                     android:text="返回"
                     android:textColor="#fff"
-                    android:textSize="5dp" />
+                    android:textSize="30dp" />
                 <!--非学员按钮-->
                 <Button
                     android:id="@+id/main6_btn_start"
@@ -476,7 +479,8 @@
                     android:layout_toRightOf="@id/main4_btn_back"
                     android:background="@drawable/btn_gradient"
                     android:text="开始评估"
-                    android:textColor="#fff"/>
+                    android:textColor="#fff"
+                    android:textSize="30dp"/>
             </LinearLayout>
         </RelativeLayout>
 

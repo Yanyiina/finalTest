@@ -12,18 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/color_background"
-        android:alpha="0.2" />
+        android:alpha="0.1" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="30dp">
         <!--标题栏-->
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="top"
             >
             <TextView
@@ -31,7 +31,7 @@
                 android:layout_height="80dp"
                 android:text="体适能评估"
                 android:gravity="center"
-                android:textSize="25dp"
+                android:textSize="60dp"
                 android:background="#00000000"
                 android:textColor="#e6ffffff"/>
         </RelativeLayout>
@@ -40,7 +40,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_weight="16"
             android:orientation="vertical"
             android:gravity="center_vertical"
             android:layout_gravity="center_horizontal">
@@ -48,26 +48,27 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
                     android:orientation="vertical"
+                    android:paddingLeft="20dp"
                     android:background="@drawable/color_small_btn">
                     <TextView
                         android:id="@+id/main5_btn6"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="身体形态"
+                        android:layout_height="wrap_content"
+                        android:text="      身体形态"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="50dp"
@@ -105,20 +106,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="right"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main5_btn1"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="身体支撑"
+                        android:layout_height="wrap_content"
+                        android:text="      身体支撑"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="30dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu1_wid"/>
 
@@ -157,29 +159,28 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:background="@drawable/color_small_btn"
                     android:layout_marginRight="10dp"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main5_btn2"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="单腿站立"
+                        android:layout_height="wrap_content"
+                        android:text="      单腿站立"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="50dp"
+                        android:paddingLeft="40dp"
                         android:drawableLeft="@drawable/main5_tu2_wid"/>
 
                     <!--历史记录与日期-->
@@ -213,20 +214,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="right"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/color_small_btn">
                     <TextView
                         android:id="@+id/main5_btn3"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="垂直纵跳"
+                        android:layout_height="wrap_content"
+                        android:text="      垂直纵跳"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="30dp"
                         android:paddingRight="50dp"
                         android:drawableLeft="@drawable/main5_tu3_wid"/>
 
@@ -266,28 +268,28 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="left"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main5_btn4"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="原地开合跳"
+                        android:layout_height="wrap_content"
+                        android:text="      原地开合跳"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="40dp"
                         android:paddingRight="30dp"
                         android:drawableLeft="@drawable/main5_tu4_wid"/>
 
@@ -323,20 +325,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="60dp"
-                    android:gravity="right"
+                    android:layout_height="200dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/color_small_btn"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/main5_btn5"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:text="选择反应时评估"
+                        android:layout_height="wrap_content"
+                        android:text="    选择反应时评估"
                         android:textColor="#fff"
-                        android:textSize="12dp"
-                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:gravity="center_vertical"
                         android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
+                        android:paddingLeft="50dp"
                         android:paddingRight="20dp"
                         android:drawableLeft="@drawable/main5_tu5_wid"/>
 
@@ -398,7 +401,7 @@
                     android:padding="5dp"
                     android:text="返回"
                     android:textColor="#fff"
-                    android:textSize="5dp" />
+                    android:textSize="30dp" />
                 <!--非学员按钮-->
                 <Button
                     android:id="@+id/main5_btn_start"
@@ -408,7 +411,8 @@
                     android:layout_toRightOf="@id/main4_btn_back"
                     android:background="@drawable/btn_gradient"
                     android:text="开始评估"
-                    android:textColor="#fff"/>
+                    android:textColor="#fff"
+                    android:textSize="30dp"/>
             </LinearLayout>
         </RelativeLayout>
 

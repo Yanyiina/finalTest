@@ -152,7 +152,7 @@ public class Main5_sub1_2 extends AppCompatActivity {
 
     //倒计时结束时跳转页面
     private void navigateToAnotherActivity(List_stu student) {
-        Intent intent = new Intent(Main5_sub1_2.this, Main5_sub1_3.class);
+        Intent intent = new Intent(Main5_sub1_2.this, Main5_sub1_1_2.class);
         intent.putExtra("student", student);
         startActivity(intent);
         finish(); // 结束当前页面

@@ -24,7 +24,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
-                android:padding="15dp">
+                android:padding="30dp">
 
                 <!--标题栏-->
                 <RelativeLayout
@@ -40,7 +40,7 @@
                         android:layout_height="wrap_content"
                         android:text="填写身高、体重"
                         android:gravity="center"
-                        android:textSize="30dp"
+                        android:textSize="60dp"
                         android:background="#00000000"
                         android:textColor="#fff"/>
                 </RelativeLayout>
@@ -49,9 +49,9 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="10"
+                    android:layout_weight="17"
                     android:gravity="center"
-                    android:layout_margin="30dp"
+                    android:layout_marginBottom="30dp"
                     android:orientation="vertical">
                     <!--身高体重-->
                     <RelativeLayout
@@ -67,34 +67,36 @@
                             >
                             <!--身高-->
                             <RelativeLayout
-                                android:layout_width="280dp"
-                                android:layout_height="100dp"
+                                android:layout_width="900dp"
+                                android:layout_height="350dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
                                 android:background="@drawable/color_high_weight"
-                                android:paddingLeft="30dp"
-                                android:layout_marginBottom="20dp">
+                                android:paddingLeft="60dp"
+                                android:layout_marginBottom="30dp">
                                 <TextView
                                     android:layout_centerVertical="true"
-                                    android:layout_width="56dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:drawableLeft="@drawable/high_logo_wid" />
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="100dp"
+                                    android:layout_height="match_parent"
                                     android:orientation="vertical"
-                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerInParent="true"
                                     android:gravity="center"
-                                    android:paddingTop="10dp">
+                                    >
                                     <LinearLayout
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="30dp">
                                         <EditText
-                                            android:layout_width="65dp"
+                                            android:layout_width="190dp"
                                             android:layout_height="wrap_content"
                                             android:textColor="#fff"
+                                            android:textSize="60dp"
                                             android:background="@drawable/edittext_bottom"
                                             android:padding="8dp"
                                             android:inputType="number|numberDecimal"
@@ -106,25 +108,22 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
+                                            android:layout_gravity="bottom"
                                             android:text=" cm"
                                             android:textColor="#fff"
-                                            android:textSize="18sp"/>
+                                            android:textSize="50dp"/>
 
                                     </LinearLayout>
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="left"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
                                         android:text="身高"
                                         android:textColor="#fff"
-                                        android:textSize="18sp" />
+                                        android:textSize="50dp" />
 
                                 </LinearLayout>
-
-
-
 
 
 
@@ -133,33 +132,34 @@
 
                             <!--体重-->
                             <RelativeLayout
-                                android:layout_width="280dp"
-                                android:layout_height="100dp"
+                                android:layout_width="900dp"
+                                android:layout_height="350dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
                                 android:background="@drawable/color_high_weight"
-                                android:paddingLeft="30dp">
+                                android:paddingLeft="60dp">
                                 <TextView
                                     android:layout_centerVertical="true"
-                                    android:layout_width="56dp"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:drawableLeft="@drawable/weight_logo_wid" />
 
                                 <LinearLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="100dp"
+                                    android:layout_height="match_parent"
                                     android:orientation="vertical"
-                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerInParent="true"
                                     android:gravity="center"
                                     android:paddingTop="10dp">
 
                                     <LinearLayout
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="30dp">
 
                                         <EditText
-                                            android:layout_width="65dp"
+                                            android:layout_width="190dp"
                                             android:layout_height="wrap_content"
                                             android:background="@drawable/edittext_bottom"
                                             android:textColor="#fff"
@@ -168,7 +168,8 @@
                                             android:maxLength="5"
                                             android:clickable="true"
                                             android:focusable="true"
-                                            android:gravity="center"/>
+                                            android:gravity="center"
+                                            android:textSize="60dp"/>
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -176,17 +177,17 @@
                                             android:layout_gravity="center"
                                             android:text=" kg"
                                             android:textColor="#fff"
-                                            android:textSize="18sp" />
+                                            android:textSize="50dp" />
 
                                     </LinearLayout>
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="left"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
                                         android:text="体重"
                                         android:textColor="#fff"
-                                        android:textSize="18sp" />
+                                        android:textSize="50dp" />
 
                                 </LinearLayout>
 
@@ -206,7 +207,7 @@
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1"
                     android:gravity="bottom"
                     android:paddingTop="10dp"
                     >
@@ -221,21 +222,21 @@
                             android:id="@+id/main5_sub6_3_back"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="30dp"
                             android:layout_weight="1"
                             android:background="@drawable/btn_back"
                             android:drawableTop="@drawable/main4_back_wid"
                             android:padding="5dp"
                             android:text="返回"
-                            android:textColor="#fff"
-                            android:textSize="5dp" />
+                            android:textColor="#b3ffffff"
+                            android:textSize="30dp" />
                         <!--下一个项目-->
                         <LinearLayout
                             android:id="@+id/main5_sub6_3_start"
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="6"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="30dp"
                             android:background="@drawable/btn_gradient"
                             android:orientation="vertical"
                             android:gravity="center">
@@ -243,14 +244,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="下一个项目"
-                                android:textSize="15dp"
-                                android:textColor="#fff"/>
+                                android:textSize="30dp"
+                                android:textColor="#b3ffffff"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="身体支撑"
-                                android:textSize="10dp"
-                                android:textColor="#fff"/>
+                                android:textSize="20dp"
+                                android:textColor="#b3ffffff"/>
                         </LinearLayout>
 
                         <!--查看报告-->
@@ -259,12 +260,12 @@
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="3"
-                            android:paddingLeft="15dp"
+                            android:paddingLeft="40dp"
                             android:background="@drawable/btn_back"
-                            android:textSize="10dp"
+                            android:textSize="30dp"
                             android:text="查看报告"
                             android:drawableLeft="@drawable/main5_sub1_3_check_wid"
-                            android:textColor="#fff"/>
+                            android:textColor="#b3ffffff"/>
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -281,21 +282,28 @@
         <!--结束测试-->
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
             >
+            <View
+                android:id="@+id/view"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_centerVertical="true"/>
             <TextView
                 android:id="@+id/main5_sub6_3_exist"
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:paddingTop="4dp"
+                android:layout_width="160dp"
+                android:layout_height="100dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
                 android:gravity="center"
                 android:background="@drawable/btn_main5_sub_over"
                 android:text="结束测试"
-                android:textColor="#fff"
-                android:textSize="8dp"
+                android:textColor="#99ffffff"
+                android:layout_below="@+id/view"
+                android:textSize="20dp"
                 android:drawableTop="@drawable/main5_sub1_1_exist_wid"/>
         </RelativeLayout>
+
 
     </RelativeLayout>
 
