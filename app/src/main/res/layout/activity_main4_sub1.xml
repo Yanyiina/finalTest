@@ -87,7 +87,7 @@
                             >
                             <!--图-->
                             <TextView
-                                android:layout_width="800dp"
+                                android:layout_width="650dp"
                                 android:layout_height="600dp"
                                 android:gravity="top"
                                 android:background="@drawable/main4_sub1_arrow_wid"/>

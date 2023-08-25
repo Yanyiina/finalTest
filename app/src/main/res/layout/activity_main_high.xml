@@ -66,8 +66,8 @@
                             >
                             <!--身高-->
                             <RelativeLayout
-                                android:layout_width="900dp"
-                                android:layout_height="350dp"
+                                android:layout_width="700dp"
+                                android:layout_height="250dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
                                 android:background="@drawable/color_high_weight"
@@ -93,10 +93,10 @@
                                         android:layout_marginBottom="30dp">
                                         <EditText
                                             android:id="@+id/main_high_height"
-                                            android:layout_width="190dp"
+                                            android:layout_width="170dp"
                                             android:layout_height="wrap_content"
                                             android:textColor="#fff"
-                                            android:textSize="60dp"
+                                            android:textSize="50dp"
                                             android:background="@drawable/edittext_bottom"
                                             android:padding="8dp"
                                             android:inputType="number|numberDecimal"
@@ -111,7 +111,7 @@
                                             android:layout_gravity="bottom"
                                             android:text=" cm"
                                             android:textColor="#fff"
-                                            android:textSize="50dp"/>
+                                            android:textSize="40dp"/>
 
                                     </LinearLayout>
 
@@ -121,7 +121,7 @@
                                         android:layout_gravity="center"
                                         android:text="身高"
                                         android:textColor="#fff"
-                                        android:textSize="50dp" />
+                                        android:textSize="40dp" />
 
                                 </LinearLayout>
 
@@ -132,8 +132,8 @@
 
                             <!--体重-->
                             <RelativeLayout
-                                android:layout_width="900dp"
-                                android:layout_height="350dp"
+                                android:layout_width="700dp"
+                                android:layout_height="250dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
                                 android:background="@drawable/color_high_weight"
@@ -160,7 +160,7 @@
 
                                         <EditText
                                             android:id="@+id/main_high_weight"
-                                            android:layout_width="190dp"
+                                            android:layout_width="170dp"
                                             android:layout_height="wrap_content"
                                             android:background="@drawable/edittext_bottom"
                                             android:textColor="#fff"
@@ -170,7 +170,7 @@
                                             android:clickable="true"
                                             android:focusable="true"
                                             android:gravity="center"
-                                            android:textSize="60dp"/>
+                                            android:textSize="50dp"/>
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
                                             android:layout_gravity="center"
                                             android:text=" kg"
                                             android:textColor="#fff"
-                                            android:textSize="50dp" />
+                                            android:textSize="40dp" />
 
                                     </LinearLayout>
 
@@ -188,7 +188,7 @@
                                         android:layout_gravity="center"
                                         android:text="体重"
                                         android:textColor="#fff"
-                                        android:textSize="50dp" />
+                                        android:textSize="40dp" />
 
                                 </LinearLayout>
 

@@ -35,15 +35,15 @@
                     android:layout_weight="5">
                     <!--圆形进度条-->
                     <RelativeLayout
-                        android:layout_width="840dp"
-                        android:layout_height="840dp"
+                        android:layout_width="680dp"
+                        android:layout_height="680dp"
                         android:background="@drawable/main5_sub1_1"
                         android:layout_centerInParent="true">
                         <ProgressBar
                             android:id="@+id/main6_sub1_progressBar"
                             style="?android:attr/progressBarStyleHorizontal"
-                            android:layout_width="670dp"
-                            android:layout_height="670dp"
+                            android:layout_width="530dp"
+                            android:layout_height="530dp"
                             android:layout_centerInParent="true"
                             android:indeterminate="false"
                             android:max="100"

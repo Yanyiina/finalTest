@@ -69,8 +69,8 @@
                         android:textSize="50dp"/>
                     <TextView
                         android:id="@+id/main6_sub6_3_time"
-                        android:layout_width="1000dp"
-                        android:layout_height="370dp"
+                        android:layout_width="840dp"
+                        android:layout_height="320dp"
                         android:layout_marginTop="-180dp"
                         android:layout_marginBottom="150dp"
                         android:background="@drawable/main5_sub1_3" />
@@ -108,7 +108,7 @@
                             android:padding="5dp"
                             android:text="返回"
                             android:textColor="@color/one"
-                            android:textSize="30dp" />
+                            android:textSize="20dp" />
                         <!--下一个项目-->
                         <LinearLayout
                             android:id="@+id/main6_sub6_3_start"
@@ -141,7 +141,7 @@
                             android:layout_weight="3"
                             android:paddingLeft="30dp"
                             android:background="@drawable/btn_back"
-                            android:textSize="30dp"
+                            android:textSize="20dp"
                             android:text="查看报告"
                             android:drawableLeft="@drawable/main5_sub1_3_check_wid"
                             android:textColor="@color/one"/>

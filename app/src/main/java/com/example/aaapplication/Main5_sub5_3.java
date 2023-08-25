@@ -24,7 +24,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private TextView main5_sub5_3_exist;
 
-//    环形倒计时
+    //    环形倒计时
     private ProgressBar progressBar;
     private TextView countdownText;
     private CountDownTimer countDown_Timer;
@@ -45,13 +45,13 @@ public class Main5_sub5_3 extends AppCompatActivity {
 //    打地鼠
 
     private int mouseCount = 0;
-    private int maxMouseCount = 10;
+    private int maxMouseCount = 5;
     private boolean gameStarted = false;
     private CountDownTimer mouseTimer;
     private TextView score;
 
     private boolean gameEnded = false;
-
+    private boolean isMouseVisible = false; // 添加一个标志来跟踪地鼠是否可见
 
 
     @Override
@@ -64,12 +64,12 @@ public class Main5_sub5_3 extends AppCompatActivity {
 
         //点击切换页面
         btn_start = (Button) findViewById(R.id.main5_sub5_1_start);
-        rel_front = (RelativeLayout)findViewById(R.id.main5_sub5_front);
-        rel_behind = (RelativeLayout)findViewById(R.id.main5_sub5_behind);
-        rel_num = (RelativeLayout)findViewById(R.id.main5_sub5_num);
-        rel_cir = (RelativeLayout)findViewById(R.id.main5_sub5_cir);
+        rel_front = (RelativeLayout) findViewById(R.id.main5_sub5_front);
+        rel_behind = (RelativeLayout) findViewById(R.id.main5_sub5_behind);
+        rel_num = (RelativeLayout) findViewById(R.id.main5_sub5_num);
+        rel_cir = (RelativeLayout) findViewById(R.id.main5_sub5_cir);
         //地鼠
-        score = (TextView)findViewById(R.id.score);
+        score = (TextView) findViewById(R.id.score);
 
 
         //        点击  跳过 按钮， 切换页面
@@ -115,7 +115,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
 
 
 //        结束测试按钮
-        main5_sub5_3_exist = (TextView)findViewById(R.id.main5_sub5_3_exist);
+        main5_sub5_3_exist = (TextView) findViewById(R.id.main5_sub5_3_exist);
         main5_sub5_3_exist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +128,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
                     mouseTimer.cancel();
                     mouseTimer = null;
                 }
-                Intent intent = new Intent(Main5_sub5_3.this,Main5_age3_6.class);
+                Intent intent = new Intent(Main5_sub5_3.this, Main5_age3_6.class);
                 intent.putExtra("student", student);
                 startActivity(intent);
                 finish();
@@ -179,6 +179,7 @@ public class Main5_sub5_3 extends AppCompatActivity {
 //                int progress = (int) (millisUntilFinished * 100 / totalTime);
 ////                progressBar.setProgress(progress);
             }
+
             @Override
             public void onFinish() {
                 countdownText.setText("00:00");
@@ -282,41 +283,43 @@ public class Main5_sub5_3 extends AppCompatActivity {
     }
 
     private void showMouseInRandomHole(final List_stu student) {
-        // 根据您提供的打地鼠布局文件中的 hole 和 mouse 控件的 ID 命名规则进行随机显示地鼠的逻辑
-        int holeCount = 9; // 假设有 9 个洞
-        int randomHoleIndex = (int) (Math.random() * holeCount) + 1; // 随机选择一个洞
-        int mouseId = getResources().getIdentifier("mouse" + randomHoleIndex, "id", getPackageName());
-        final ImageButton randomHoleLayout = findViewById(mouseId);
-        randomHoleLayout.setVisibility(View.VISIBLE);
+        if (!isMouseVisible) {
+            // 根据您提供的打地鼠布局文件中的 hole 和 mouse 控件的 ID 命名规则进行随机显示地鼠的逻辑
+            int holeCount = 9; // 假设有 9 个洞
+            int randomHoleIndex = (int) (Math.random() * holeCount) + 1; // 随机选择一个洞
+            int mouseId = getResources().getIdentifier("mouse" + randomHoleIndex, "id", getPackageName());
+            final ImageButton randomHoleLayout = findViewById(mouseId);
 
-        randomHoleLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (gameStarted && mouseCount <= maxMouseCount) {
-                    v.setVisibility(View.INVISIBLE);
-                    mouseCount++;
-                    score.setText("得分为" + mouseCount);
-                    if (mouseCount == maxMouseCount) {
+            if (randomHoleLayout.getVisibility() != View.VISIBLE) {
+                randomHoleLayout.setVisibility(View.VISIBLE);
+                isMouseVisible = true;
+
+                randomHoleLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (gameStarted && mouseCount <= maxMouseCount) {
+                            v.setVisibility(View.INVISIBLE);
+                            isMouseVisible = false; // 当点击地鼠时，将标志设置为false
+                            mouseCount++;
+                            score.setText("得分为" + mouseCount);
+                            if (mouseCount == maxMouseCount) {
 //                        mouseCount++;
 //                        score.setText("得分为"+ mouseCount);
-                        stopWhackAMoleGame();
-                        navigateToAnotherActivity(student);
+                                stopWhackAMoleGame();
+                                navigateToAnotherActivity(student);
+                            } else {
+                                showMouseInRandomHole(student); // 显示下一只地鼠
+                            }
+                        }
                     }
-                }
-            }
-        });
+                });
 
-        // 地鼠消失的延迟时间，可根据需要调整
-        int mouseDisappearDelay = 500;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                randomHoleLayout.setVisibility(View.INVISIBLE);
+                // 地鼠消失的延迟时间，可根据需要调
             }
-        }, mouseDisappearDelay);
+        }
     }
-
+}
 
 
 //
-}
+

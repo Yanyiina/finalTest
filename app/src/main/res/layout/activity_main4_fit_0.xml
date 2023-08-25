@@ -56,7 +56,7 @@
             <!--图标-->
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="220dp"
+                android:layout_height="200dp"
                 >
                 <TextView
                     android:id="@+id/view6"
@@ -67,7 +67,7 @@
                     android:text="身高体重"
                     android:paddingTop="30dp"
                     android:paddingRight="30dp"
-                    android:textSize="30dp"
+                    android:textSize="24dp"
                     android:gravity="center"
                     android:textColor="#fff"
                     android:drawableTop="@drawable/main4_view1_wid"
@@ -80,7 +80,7 @@
                             android:background="@drawable/main4_arr2"
                             android:text="站位指引"
                             android:paddingTop="30dp"
-                            android:textSize="30dp"
+                            android:textSize="24dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view1_wid"
@@ -93,7 +93,7 @@
                             android:background="@drawable/main4_arr2"
                             android:text="放松环节"
                             android:paddingTop="30dp"
-                            android:textSize="30dp"
+                            android:textSize="24dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view2_wid"/>
@@ -105,7 +105,7 @@
                             android:background="@drawable/main4_arr2"
                             android:text="正面评估"
                             android:paddingTop="30dp"
-                            android:textSize="30dp"
+                            android:textSize="24dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view3_wid"/>
@@ -117,7 +117,7 @@
                             android:background="@drawable/main4_arr2"
                             android:text="侧面评估"
                             android:paddingTop="30dp"
-                            android:textSize="30dp"
+                            android:textSize="24dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view4_wid"/>
@@ -129,7 +129,7 @@
                             android:background="@drawable/main4_arr2"
                             android:text="生成报告"
                             android:paddingTop="56dp"
-                            android:textSize="30dp"
+                            android:textSize="24dp"
                             android:gravity="center"
                             android:textColor="#fff"
                             android:drawableTop="@drawable/main4_view5_wid"/>
@@ -179,7 +179,7 @@
                 android:paddingTop="8dp"
                 android:text="返回"
                 android:textColor="#fff"
-                android:textSize="30dp" />
+                android:textSize="20dp" />
             <!--非学员按钮-->
             <Button
                 android:id="@+id/main4_start"

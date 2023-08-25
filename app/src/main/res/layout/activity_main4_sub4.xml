@@ -135,8 +135,8 @@
                     <!--android:drawableLeft="@drawable/main4_sub4_scan_wid"/>-->
                 <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/gv_error"
-                    android:layout_width="540dp"
-                    android:layout_height="600dp"
+                    android:layout_width="300dp"
+                    android:layout_height="500dp"
                     android:scaleType="centerCrop"
                     android:layout_centerInParent="true"
                     android:src="@drawable/side"/>

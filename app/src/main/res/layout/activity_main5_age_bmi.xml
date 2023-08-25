@@ -67,12 +67,12 @@
                             >
                             <!--身高-->
                             <RelativeLayout
-                                android:layout_width="900dp"
-                                android:layout_height="350dp"
+                                android:layout_width="700dp"
+                                android:layout_height="250dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
                                 android:background="@drawable/color_high_weight"
-                                android:paddingLeft="60dp"
+                                android:paddingLeft="40dp"
                                 android:layout_marginBottom="30dp">
                                 <TextView
                                     android:layout_centerVertical="true"
@@ -93,10 +93,10 @@
                                         android:orientation="horizontal"
                                         android:layout_marginBottom="30dp">
                                         <EditText
-                                            android:layout_width="190dp"
+                                            android:layout_width="170dp"
                                             android:layout_height="wrap_content"
                                             android:textColor="#fff"
-                                            android:textSize="60dp"
+                                            android:textSize="50dp"
                                             android:background="@drawable/edittext_bottom"
                                             android:padding="8dp"
                                             android:inputType="number|numberDecimal"
@@ -111,7 +111,7 @@
                                             android:layout_gravity="bottom"
                                             android:text=" cm"
                                             android:textColor="#fff"
-                                            android:textSize="50dp"/>
+                                            android:textSize="40dp"/>
 
                                     </LinearLayout>
 
@@ -121,7 +121,7 @@
                                         android:layout_gravity="center"
                                         android:text="身高"
                                         android:textColor="#fff"
-                                        android:textSize="50dp" />
+                                        android:textSize="40dp" />
 
                                 </LinearLayout>
 
@@ -132,12 +132,12 @@
 
                             <!--体重-->
                             <RelativeLayout
-                                android:layout_width="900dp"
-                                android:layout_height="350dp"
+                                android:layout_width="700dp"
+                                android:layout_height="250dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
                                 android:background="@drawable/color_high_weight"
-                                android:paddingLeft="60dp">
+                                android:paddingLeft="40dp">
                                 <TextView
                                     android:layout_centerVertical="true"
                                     android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
                                         android:layout_marginBottom="30dp">
 
                                         <EditText
-                                            android:layout_width="190dp"
+                                            android:layout_width="170dp"
                                             android:layout_height="wrap_content"
                                             android:background="@drawable/edittext_bottom"
                                             android:textColor="#fff"
@@ -169,7 +169,7 @@
                                             android:clickable="true"
                                             android:focusable="true"
                                             android:gravity="center"
-                                            android:textSize="60dp"/>
+                                            android:textSize="50dp"/>
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -177,7 +177,7 @@
                                             android:layout_gravity="center"
                                             android:text=" kg"
                                             android:textColor="#fff"
-                                            android:textSize="50dp" />
+                                            android:textSize="40dp" />
 
                                     </LinearLayout>
 
@@ -187,7 +187,7 @@
                                         android:layout_gravity="center"
                                         android:text="体重"
                                         android:textColor="#fff"
-                                        android:textSize="50dp" />
+                                        android:textSize="40dp" />
 
                                 </LinearLayout>
 
@@ -229,7 +229,7 @@
                             android:padding="5dp"
                             android:text="返回"
                             android:textColor="#b3ffffff"
-                            android:textSize="30dp" />
+                            android:textSize="20dp" />
                         <!--下一个项目-->
                         <LinearLayout
                             android:id="@+id/main5_sub6_3_start"
@@ -262,7 +262,7 @@
                             android:layout_weight="3"
                             android:paddingLeft="40dp"
                             android:background="@drawable/btn_back"
-                            android:textSize="30dp"
+                            android:textSize="20dp"
                             android:text="查看报告"
                             android:drawableLeft="@drawable/main5_sub1_3_check_wid"
                             android:textColor="#b3ffffff"/>

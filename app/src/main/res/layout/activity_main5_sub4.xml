@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="原地开合跳    "
-                    android:textSize="70dp"
+                    android:textSize="60dp"
                     android:textColor="#b3ffffff"
                     android:drawableRight="@drawable/main5_sub1_arr_wid"
                     android:layout_marginBottom="15dp"/>
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:text="原地开合跳是通过单脚站的最长持续时间来评估你的平衡性，请按照视频评估要求依次进行评估。"
                     android:textColor="#99ffffff"
-                    android:textSize="40dp"
+                    android:textSize="35dp"
                     android:layout_marginBottom="30dp"/>
                 <!--分割线-->
                 <View
@@ -82,7 +82,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="-160dp"
+                android:layout_marginTop="-110dp"
                 android:orientation="vertical"
                 android:layout_gravity="center_horizontal">
 
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:text="   注意事项"
                     android:textColor="@color/back_go"
-                    android:textSize="40dp"
+                    android:textSize="35dp"
                     android:drawableLeft="@drawable/main5_sub1_notice_wid"
                     android:layout_marginBottom="15dp"/>
                 <TextView
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:text="开始评估前请充分热身。如果在评估过程中出现关节不适或疼痛，请停止评估。如果情况严重，请及时冰敷并立即就医。"
                     android:textColor="#99ffffff"
-                    android:textSize="40dp"/>
+                    android:textSize="35dp"/>
 
 
             </LinearLayout>
@@ -132,7 +132,7 @@
                     android:padding="5dp"
                     android:text="返回"
                     android:textColor="#b3ffffff"
-                    android:textSize="30dp" />
+                    android:textSize="20dp" />
                 <!--开始评估按钮-->
                 <Button
                     android:id="@+id/main5_sub4_start"

@@ -37,9 +37,8 @@
 
                 <ImageView
                     android:id="@+id/gv_error"
-                    android:layout_width="800dp"
-                    android:layout_height="800dp"
-                    android:scaleType="centerCrop"
+                    android:layout_width="700dp"
+                    android:layout_height="600dp"
                     android:layout_centerInParent="true"
                     android:src="@drawable/body"/>
 
@@ -58,16 +57,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="身体形态    "
-                    android:textSize="70dp"
+                    android:textSize="60dp"
                     android:textColor="#b3ffffff"
                     android:drawableRight="@drawable/main5_sub1_arr_wid"
-                    android:layout_marginBottom="15dp"/>
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="身体形态是通过身高、体重数值计算BMI指数，来衡量人体胖瘦程度以及是否健康。"
                     android:textColor="#99ffffff"
-                    android:textSize="40dp"
+                    android:textSize="35dp"
                     android:layout_marginBottom="30dp"/>
                 <!--分割线-->
                 <View
@@ -91,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:text="   注意事项"
                     android:textColor="@color/back_go"
-                    android:textSize="40dp"
+                    android:textSize="35dp"
                     android:drawableLeft="@drawable/main5_sub1_notice_wid"
                     android:layout_marginBottom="15dp"/>
                 <TextView
@@ -99,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:text="请准确测量并填写信息，身高、体重都保留一位小数"
                     android:textColor="#99ffffff"
-                    android:textSize="40dp"/>
+                    android:textSize="35dp"/>
 
 
             </LinearLayout>
@@ -132,7 +131,7 @@
                     android:padding="5dp"
                     android:text="返回"
                     android:textColor="#b3ffffff"
-                    android:textSize="30dp" />
+                    android:textSize="20dp" />
                 <!--开始评估按钮-->
                 <Button
                     android:id="@+id/main5_sub6_start"
